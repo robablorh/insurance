@@ -1,0 +1,98 @@
+*{
+   
+margin: 0px;
+padding:0px;
+box-sizing: border-box;
+
+}
+
+
+/*Nav1 styles*/
+
+.logins{
+    margin-right: 500px;
+}
+.nav1btn{
+    margin-right: 15px;
+    border-radius: 20px;
+}
+.pnav{
+    margin-top: 10px;
+}
+
+
+/*Nav2 styles*/
+
+.na2links{
+  margin-left:500px;
+}
+
+
+/*Home*/
+.h1head{
+  
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.h2head{
+    text-align: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.tparty{
+    margin-top : 90px
+}
+
+.foot{
+    margin-bottom: 100px;
+    
+}
+
+.sur1{
+    margin-top : 50px;
+    margin-bottom: 100px;
+   
+}
+
+.suform{
+    margin-top: 50px;
+    margin-bottom :100px;
+}
+
+.insu{
+    width: 400px;
+    height: 60px;
+}
+.subtn{
+
+   margin-left: 1200px;
+   width: 120px;
+   height: 50px;
+   border-radius: 15px;
+   
+
+}
+
+.crInput{
+    width: 400px;
+    height: 50px;
+}
+
+.tabdraft{
+
+    height:150px
+
+}
+.tabdraft1{
+    height :60px;
+}
+
+.draft{
+    border: 2px solid black;
+    padding: 80px;
+}
+ 
