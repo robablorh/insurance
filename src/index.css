@@ -4,6 +4,7 @@ margin: 0px;
 padding:0px;
 box-sizing: border-box;
 
+
 }
 
 
@@ -95,4 +96,122 @@ box-sizing: border-box;
     border: 2px solid black;
     padding: 80px;
 }
- 
+
+/* SIgnIn&UP*/
+
+.silab{
+    color: rgb(31, 102, 196);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+ .silinp{
+    width: 600px;
+    height: 50px;
+    margin-left: 17px;
+    margin-bottom: 20px;
+
+
+ }
+ .sign{
+   border: 2px solid rgb(97, 144, 245);
+ }
+
+ .sibtn{
+    width: 600px;
+    height: 45px;
+    margin-left: 17px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: rgb(250, 125, 15);
+    border-radius: 10px;
+    border-color:  rgb(250, 125, 15);;
+ }
+ .rad{
+    margin-left: 30px;
+    
+ }
+ .forg{
+    margin-left: 300px;
+
+ }
+ .sinp{
+    text-align: center;
+ }
+ .sinh{
+    text-align: center;
+ }
+
+.per{
+    height: 70px;
+    width: 180px;
+}
+/*Dashboard*/
+.row5{
+    background-color: rgb(87, 119, 207);
+    width: 800px;
+    border-bottom: 3px solid rgb(39, 39, 121);
+    
+
+}
+.row3{
+    background-color: rgb(194, 210, 216);
+    height: 100px;
+    width: 800px;
+    border-bottom: 3px solid gray;
+   
+}
+.row4{
+    background-color: rgb(194, 210, 216); 
+   
+    height: 200px;
+    width: 800px;
+    border-bottom: 3px solid gray;
+    
+}
+
+.robtn{
+    height: 30px;
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.prow{
+    margin-top: 30px;
+}
+.lach{
+    margin-top: 30px;
+}
+.labin{
+    width: 550px;
+    margin-left: 20px;
+    height: 40px;
+   
+}
+.find{
+    margin-top: 50px;
+    margin-left: 500px;
+    width: 200px;
+    height: 40px;
+    background-color: aquamarine;
+}
+.dashcont{
+    border: 3px solid gray;
+    height: 600px;
+    
+}
+.v2row3{
+    background-color: rgb(194, 210, 216);
+    height: 300px;
+    width: 800px;
+   border-bottom: 3px solid gray;
+    
+}
+
+.rowC4{
+    background-color: rgb(194, 210, 216); 
+   
+    height: 80px;
+    width: 800px;
+    border-bottom: 3px solid gray;
+}

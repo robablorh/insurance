@@ -27,7 +27,7 @@ const Navbar2 = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link  ><Link className="n2links" to='/'>Home</Link></Nav.Link>
-            <Nav.Link className="n2links" ><Link to='/about'>About Us</Link></Nav.Link>
+
             <Nav.Link className="n2links" ><Link to='/companies'>Insurance Companies</Link></Nav.Link>
             <Nav.Link className="n2links" ><Link to='/autoinsurance'>Auto-Insurance News</Link></Nav.Link>
             <Nav.Link className="n2links" ><Link to='/qoute'>Get a Quote</Link></Nav.Link>

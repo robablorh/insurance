@@ -1,54 +1,57 @@
 import { Container, Row , Col } from "react-bootstrap"
+import { Link } from "react-router-dom"
+import car3 from '../images/car3.png'
 
 const Signup = () => {
   return (
+    
     <div>
-        <form>
-         <Container  >
-            <Row className="sur1">
-                <Col> <input  type="text" className="insu"    placeholder="First Name" /> </Col>
-                <Col> <input  type="text"  className="insu"   placeholder="Surname" /></Col>
-                <Col> <input  type="text"  className="insu"    placeholder=" Other Names" /> </Col>
-               
+    <Container>
+      <Row>
+        <Col className="sign">
+            <h2 className="sinh">Sign Up</h2>
+            <p>Sign-up below to get started</p>
 
-            </Row>
-            <Row  className="suform">
-                <Col> <input  type="text"  className="insu"    placeholder="Gender" /> </Col>
-                <Col> <input  type="email"  className="insu"    placeholder="Email" /></Col>
-               
-               
+            <form className="siform">  
+                <label className="silab"  >Name:</label><br/>
+                <input className='silinp'  type="text" name="name"/><br/>
 
-            </Row>
-            <Row className="sur1"> 
-                <Col> <input  type="text"  className="insu"    placeholder="mobile number(1)" /> </Col>
-                <Col> <input  type="text"  className="insu"    placeholder="mobile number(2)" /></Col>
-                <Col> <input  type="text"   className="insu"   placeholder="Telephone/Fax" /> </Col>
-               
+                <label className="silab"  >Email</label><br/>
+                <input className='silinp'  type="email" name="email"/><br/>
 
-            </Row>
-            <Row className="suform">
-                <Col> <input  type="text"   className="insu"   placeholder="Residential Adress" /> </Col>
-                <Col> <input  type="text" className="insu"     placeholder="Postal Adress" /></Col>
-              
-               
+                <label className="silab"  >Password</label><br/>
+                <input className='silinp'   type="password" name="password"/><br/>
 
-            </Row>
-            <button className="subtn">REGISTER</button>
+                <label className="silab"  >Confirm Password</label><br/>
+                <input className='silinp'   type="password" name="password"/><br/>
+
+                <input  className='rad' type="radio" name='remeberme '/>
+                <label className="rem">Remember Me</label><br/>
+
+                <input className="sibtn" type="submit" value="Sign Up"/>
+                <p className="sinp"> Already have an account? <Link to='/login'>login</Link></p>
+              </form>
             
-         </Container>
+        
+        
+        
+        </Col>
+        <Col>
+        <img
+                src={car3}
+                height="700"
+                width="600"
+              
+              
+              
+              />
+        
+        </Col>
+      </Row>
+    </Container>
 
+  </div>
 
-
-        </form>
-      
-       
-
-
-
-
-
-
-    </div>
   )
 }
 
