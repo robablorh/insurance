@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { PaystackButton } from 'react-paystack';
 import Modal from 'react-bootstrap/Modal';
+import { Col, Row } from 'react-bootstrap';
+
 
 const Companies = () => {
 
@@ -36,20 +39,12 @@ const Companies = () => {
     },
     onClose: () => alert("Wait! don't go!!!!"),
   };
+  const [selectedOption, setSelectedOption] = useState('');
 
-  const [selectedOptions, setSelectedOptions] = useState([]);
-
-  const handleCheckboxChange = (e) => {
-    const optionName = e.target.name;
-    const optionAmount = parseInt(e.target.getAttribute);
-   
-  if (e.target.checked) {
-    setSelectedOptions((prevOptions) => [...prevOptions, { name: optionName, amount: optionAmount }]);
-    
-  } else {
-    setSelectedOptions((prevOptions) => prevOptions.filter((option) => option.name !== optionName));
- 
-  }}
+  const handleCheckboxChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+  
 
 const [show, setShow] = useState(false);
 
@@ -58,93 +53,105 @@ const [show, setShow] = useState(false);
 
   return (
     <div>
-          <>
+          <div>
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal show={show} onHide={handleClose} size = "lg" className='my-modal'>
+        <Modal.Header closeButton className='px-5'>
           <Modal.Title>INSURANCE COMPANIES</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            <p>(Choose One Insurance Company)</p>
-        <form>
-           <input type='radio' name='Pheonix Insurance' onChange={handleCheckboxChange}/>
-           <label>Pheonix Insurance</label>
-           <input type='radio' name='Serene Insurance' onChange={handleCheckboxChange}/>
-           <label>Serene Insurance</label><br/>
-           <input type='radio' name='Priority Insurance' onChange={handleCheckboxChange}/>
-           <label>Priority Insurance</label>
-           <input type='radio' name='Prudential Insurance' onChange={handleCheckboxChange}/>
-           <label>Prudential Insurance</label><br/>
-           <input type='radio' name='Enetrprise Insurance' onChange={handleCheckboxChange}/>
-           <label>Enterprise Insurance</label>
-           <input type='radio' name='Star Insurance' onChange={handleCheckboxChange}/>
-           <label>Star Insurance</label>
-
-        </form>
+        <Modal.Body className='px-5'>
+            <h4 className='text-success'>Choose One Insurance Company</h4>
+            <form className=''>
+              <Row>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value='Phoenix Insurance' onChange={handleCheckboxChange} />
+                  <label>Phoenix Insurance</label>
+                </Col>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value= "Serene Insurance" onChange={handleCheckboxChange} />
+                  <label>Serene Insurance</label>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value="Priority Insurance" onChange={handleCheckboxChange} />
+                  <label >Priority Insurance</label>
+                </Col>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value="Prudential Insurance" onChange={handleCheckboxChange} />
+                  <label>Prudential Insurance</label>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value="Enterprise Insurance" onChange={handleCheckboxChange} />
+                  <label>Enterprise Insurance</label>
+                </Col>
+                <Col xs={6} className="d-flex align-items-center">
+                  <input className='me-3' type='radio' name='insurance' value="Star Insurance" onChange={handleCheckboxChange} />
+                  <label>Star Insurance</label>
+                </Col>
+              </Row>
+            </form>
         </Modal.Body>
-        
-
-
-        <div>
-                
-                <h2>Selected Company</h2>
-                <ul>
-                  {selectedOptions.map((option, index) => (
-                    <li key={index}>
-                      {option.name} 
-                    </li>
-                  ))}
-                </ul>
-                
-               
-              </div>
-              <div className="checkout">
-          <div className="checkout-form">
-            <div className="checkout-field">
-              <label>Name</label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
+        <div className='px-5'>
+            {selectedOption && <h5 className='text-success mb-4'>You selected {selectedOption}</h5>}
+         </div>
+          <div className="checkout px-5">
+            <div className="checkout-form">
+              {selectedOption && (
+                <div>
+                <hr />
+                <h5 className='mb-3'>Please fill the form below to make payment</h5>
+              <form className=''>
+                <div className="form-group d-flex align-items-center">
+                  <label className="form-label mb-4 me-4" htmlFor="name">Name: </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="form-control mb-4"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    // style={{ width: '70%' }}
+                  />
+                </div>
+                <div className="form-group d-flex align-items-center">
+                      <label className="form-label mb-4 me-4" htmlFor="email">Email: </label>
+                  <input
+                    type="text"
+                    id="email"
+                    className="form-control mb-4"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    // style={{ width: '70%' }}
+                  />
+                </div>
+                  <div className="form-group d-flex align-items-center" style={{ display: 'flex' }}>
+                      <label className="form-label mb-4 me-3" htmlFor="phone">Phone: </label>
+                  <input
+                    type="text"
+                    id="phone"
+                    className="form-control mb-4 ms-1"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    // style={{ width: '70%' }}
+                  />
+                </div>
+                <div className="form-group">
+                  <PaystackButton className="btn btn-primary px-4 py-2" {...componentProps} />
+                  <p className="mt-3 text-danger">(No refunds)</p>
+                </div>
+              </form>
+                </div>
+              )}  
             </div>
-            <div className="checkout-field">
-              <label>Email</label>
-              <input
-                type="text"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className="checkout-field">
-              <label>Phone</label>
-              <input
-                type="text"
-                id="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-            <PaystackButton className="paystack-button" {...componentProps} />
-            <p>(No refunds)</p>
           </div>
-        </div>
-          
-   
-
-
-
 
       </Modal>
-    </>
-
-
-
+    </div>
     </div>
   )
 }
