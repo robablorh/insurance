@@ -1,16 +1,27 @@
-.user-section {
-  margin-right: 3.75rem; 
-}
-
 .sidebar {
-  transition: left 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* .sidebar.open {
-  left: 0;
-} */
+.sidebar.open {
+  transform: translateX(0);
+}
 
-.main-content {
-  margin-left: 300px; /* Adjust this to match the sidebar width */
-  padding: 20px;
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.content {
+  position: relative;
+  left: 6rem;
+  z-index: 0;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content.closed {
+  margin-left: 0;
 }
