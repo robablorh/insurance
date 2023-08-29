@@ -17,7 +17,8 @@ function App() {
   return (
     <>
     {/* <Carconfirmation /> */}
-    <Dashboard />
+    <Companies />
+    {/* <Dashboard /> */}
     {/* <Home /> */}
 {/* <Companies/> */}
  
