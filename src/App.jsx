@@ -2,6 +2,7 @@
 import Companies from "./components/Companies"
 import Home from "../src/pages/Home"
 import Dashboard from "./pages/DashBoard"
+import Carconfirmation from './components/Carconfirmation'
 
 
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+    {/* <Carconfirmation /> */}
     <Dashboard />
     {/* <Home /> */}
 {/* <Companies/> */}
