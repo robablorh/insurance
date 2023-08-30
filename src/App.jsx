@@ -5,6 +5,8 @@ import Dashboard from "./pages/DashBoard"
 import Carconfirmation from './components/Carconfirmation'
 import DashNav from "./components/DashNav"
 import DriverBio from "./components/DriverBio"
+import InsuranceTypes from "./components/InsuranceTypes"
+import ThreeMonths from "./components/ThreeMonths"
 
 
 
@@ -18,7 +20,9 @@ function App() {
 
   return (
     <>
-    <DriverBio />
+    {/* <ThreeMonths/> */}
+    <InsuranceTypes />
+    {/* <DriverBio /> */}
     {/* <Carconfirmation /> */}
     {/* <Companies /> */}
     {/* <Dashboard /> */}

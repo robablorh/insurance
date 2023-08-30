@@ -1,24 +1,29 @@
-import { Container,Row} from "react-bootstrap"
-
+import { Button, Container,Row} from "react-bootstrap"
+import "../index.css";
 const ThreeMonths = () => {
   return (
-    <div>
-
+    <div className="w-100">
         <Container>
-              <Row>
-                <h4>Comprehensive Insurance</h4>
-                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car<span> GhS 600</span></p>
+        <Row style={{ backgroundColor:"#C2D2D8", borderBottom: "3px solid gray" }}>
+                <h4 className="text-danger">Comprehensive Insurance</h4>
+                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
+            <h6 className="mt-1 text-danger text-end"> GhS 600</h6></p>
               </Row>
-              <Row>
-                <h4>Third-Party Insurance</h4>
-                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car<span> GhS 200</span></p>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray" }}>
+          <h4 className="text-danger">Third-Party Insurance</h4>
+                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
+                <h6 className="mt-1 text-danger text-end"> GhS 200</h6></p>
               </Row>
-              <Row>
-                <h4>THird-Party Fire and Theft Insurance</h4>
-                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car<span> GhS 400</span></p>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray" }}>
+          <h4 className="text-danger">Third-Party Fire and Theft Insurance</h4>
+                <p>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
+            <h6 className="mt-1 text-danger text-end"> GhS 400</h6></p>
               </Row>
-             <button>Continue</button>
-              
+        <div className="d-flex justify-content-end mt-4" style={{ width: "100%" }}>
+          <Button className="py-3 px-4" variant="primary" type="submit">
+            Continue
+          </Button>
+        </div>    
         </Container>
     </div>
   )
