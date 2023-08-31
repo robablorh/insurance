@@ -1,8 +1,16 @@
 import { Container, Row , Col } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import car3 from '../images/car3.png'
+import { useNavigate } from "react-router-dom"
 
 const Signup = () => {
+
+  const navigate = useNavigate()
+   
+  const navigateDashboard = () => {
+   
+   navigate('/dashboard');
+ };
   return (
     
     <div>
@@ -28,7 +36,7 @@ const Signup = () => {
                 <input  className='rad' type="radio" name='remeberme '/>
                 <label className="rem">Remember Me</label><br/>
 
-                <input className="sibtn" type="submit" value="Sign Up"/>
+                <input onClick={navigateDashboard} className="sibtn" type="submit" value="Sign Up"/>
                 <p className="sinp"> Already have an account? <Link to='/login'>login</Link></p>
               </form>
             

@@ -1,27 +1,50 @@
 import {Container , Row, } from 'react-bootstrap'
+import {useNavigate} from "react-router-dom"
+import Dash from '../pages/Dash';
+
+
 
 const Vehichel2 = () => {
+
+const navigate = useNavigate();
+
+const navigatecarconfirmation =()=>{
+  navigate('/carconfirmation');
+
+}
+
   return (
     <div>
+      <Dash/>
+     
     <Container>
 
+    <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#007bff", padding: "1.5rem" }}>Vehicle</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#0069d9", padding: "1.5rem" }}>Insurer</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#0062cc", padding: "1.5rem" }}>Cover</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#005cbf", padding: "1.5rem" }}>Payment</button>
+        </div> 
+<div className="wholebox">
 <Row className='row1'><h3>Find the car</h3></Row>
-<Row className='row2'><p>Enter your chasis number and let our car search do the work for you.if you dont know it click on No  to enter your details manually.</p></Row>
-<Row className='row5'><h2>Find Car</h2></Row>
+<Row className='row2'><p>Ennter your car details here.</p></Row>
+<Row className='row5'><h2> Car Deatails</h2></Row>
 <Row className='v2row3'>
     <form>
-    <label>Make</label>
-    <input type='text' name='make'/><br/><hr/>
-    <label>Model</label>
-    <input type='text' name='model'/><br/><hr/>
-    <label>Fuel type</label>
-    <select name="cars" id="cars" >
-        <option value="petrol">Petrol</option>
+    <label className='vehi2'>  Registration  Num</label>
+    <input className='vehinp' type='text' name='regnum'/><br/><hr/>
+    <label className='vehi2'>Make</label>
+    <input className='vehinp' type='text' name='make'/><br/><hr/>
+    <label className='vehi2'>Model</label>
+    <input className='vehinp' type='text' name='model'/><br/><hr/>
+    <label className='vehi2'>Fuel type</label>
+    <select className='vehinp' name="cars" id="cars" >
+        <option   value="petrol">Petrol</option>
         <option value="diseal">Diseal</option>
       
     </select><br/><hr/>
     <label>Year of Manufacture</label>
-    <select name="cars" id="cars" >
+    <select  className='vehinpp'  name="cars" id="cars" >
 
         <option value="1995">1995</option>
         <option value="1996">1996</option>
@@ -54,10 +77,13 @@ const Vehichel2 = () => {
         <option value="2023">2023</option>
        
      </select><br/><hr/>
-     <input type='submit' value='Show Results'/>
+     </form>
     
-    </form>
+    
+   
 </Row>
+<button onClick={ navigatecarconfirmation} className='find' >Show Results</button>
+</div>
 
  
 </Container>

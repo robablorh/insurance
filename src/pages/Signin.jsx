@@ -1,8 +1,19 @@
 import {Container , Row ,Col} from "react-bootstrap"
 import ins from "../images/ins.png"
 import { Link } from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 
 const Signin = () => {
+
+ const navigate = useNavigate()
+   
+ const navigateDashboard = () => {
+  
+  navigate('/dashboard');
+};
+
+
+
   return (
     <div>
       <Container className="cont">
@@ -27,7 +38,7 @@ const Signin = () => {
                 <label className="rem">Remember Me</label> 
                 <Link className="forg" to='/forgot'>forgot password?</Link><br/>
 
-                <input className="sibtn" type="submit" value="login"/>
+                <input  onClick={navigateDashboard}  className="sibtn" type="submit" value="login"/>
                 <p className="sinp">You do not have an account? <Link to='/signup'>Sign-up</Link></p>
               </form>
 

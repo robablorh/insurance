@@ -55,7 +55,7 @@ const [show, setShow] = useState(false);
     <div>
           <div>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Choose Company
       </Button>
 
       <Modal show={show} onHide={handleClose} size = "lg" className='my-modal'>
@@ -141,7 +141,7 @@ const [show, setShow] = useState(false);
                   />
                 </div>
                 <div className="form-group">
-                  <PaystackButton className="btn btn-primary px-4 py-2" {...componentProps} />
+                  <PaystackButton className="btn btn-primary px-4 py-2 paystack-button" {...componentProps} />
                   <p className="mt-3 text-danger">(No refunds)</p>
                 </div>
               </form>

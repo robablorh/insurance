@@ -149,31 +149,36 @@ box-sizing: border-box;
 /*Dashboard*/
 .row5{
     background-color: rgb(87, 119, 207);
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid rgb(39, 39, 121);
+    height: 70px;
+    padding-top: 15px;
+    color: white;
     
 
 }
 .row3{
     background-color: rgb(194, 210, 216);
     height: 100px;
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid gray;
    
 }
 .row4{
     background-color: rgb(194, 210, 216); 
    
-    height: 200px;
-    width: 800px;
+    height: 150px;
+    width: 1300px;
     border-bottom: 3px solid gray;
+    padding-top: 20px;
     
 }
 
 .robtn{
-    height: 30px;
-    width: 100px;
-    margin-left: 30px;
+    height: 40px;
+    width: 150px;
+    border-radius: 7px;
+
     margin-top: 30px;
 }
 .prow{
@@ -183,17 +188,19 @@ box-sizing: border-box;
     margin-top: 30px;
 }
 .labin{
-    width: 550px;
+    width: 750px;
     margin-left: 20px;
     height: 40px;
    
 }
 .find{
     margin-top: 50px;
-    margin-left: 500px;
+    margin-left: 900px;
     width: 200px;
-    height: 40px;
-    background-color: aquamarine;
+    height: 50px;
+    background-color: rgb(46, 46, 217);
+    border-radius: 7px;
+    color: white;
 }
 .dashcont{
     border: 3px solid gray;
@@ -202,8 +209,8 @@ box-sizing: border-box;
 }
 .v2row3{
     background-color: rgb(194, 210, 216);
-    height: 300px;
-    width: 800px;
+    height: 400px;
+    width: 1300px;
    border-bottom: 3px solid gray;
     
 }
@@ -212,6 +219,53 @@ box-sizing: border-box;
     background-color: rgb(194, 210, 216); 
    
     height: 80px;
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid gray;
+}
+.btn-group{
+    margin-top: 60px;
+    
+}
+
+.wholebox{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+
+.vehinp{
+
+     margin-left: 40px;
+     width: 300px;
+     height: 40px;
+
+
+}
+
+.vehinpp{
+
+    margin-left: 40px;
+    width: 100px;
+    height: 40px;
+
+
+}
+.cbbtn{
+    width: 150px;
+    margin-top: 60px;
+
+}
+
+.combtn{
+    margin-left: 900px;
+}
+
+.brk{
+    width: 450px;
+}
+.shifttypes{
+    margin-left: 450px;
+}
+.covers{
+    text-align: center;
 }

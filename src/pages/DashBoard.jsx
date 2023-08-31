@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../App.css';
-import Carconfirmation from '../components/Carconfirmation';
+
+import Vehichel1 from '../components/Vehichel1';
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -47,12 +48,25 @@ const Dashboard = () => {
             </Col>
             <Col md={9} className={`content ${sidebarOpen ? '' : 'closed'}`} >
               <div className="d-flex align-items-center justify-content-center ms-6">
-                <Carconfirmation />
+                
               </div>
             </Col>
           </Row>
         </Container>
+
       </div>
+      <Container  className=''>
+
+
+            <Row>
+              <Vehichel1/>
+
+            </Row>
+
+          
+
+      </Container>
+    
     </div>
   );
 };

@@ -1,40 +1,68 @@
 import { Container,Row,Col} from "react-bootstrap"
+import { useNavigate } from "react-router-dom";
+
 
 
 const Carconfirmation = () => {
+
+    const navigate = useNavigate();
+
+   
+      const navigatevehichel2 =() =>{
+         
+        navigate('/vehichel2');
+      }
+
+      const navigatedriverBio =() =>{
+        navigate("/driverbio")
+      }
+
   return (
     <div>
          <Container>
 
+         <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#007bff", padding: "1.5rem" }}>Vehicle</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#0069d9", padding: "1.5rem" }}>Insurer</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#0062cc", padding: "1.5rem" }}>Cover</button>
+          <button type="button" className="btn btn-primary" style={{ backgroundColor: "#005cbf", padding: "1.5rem" }}>Payment</button>
+        </div>
+
          <Row className='row1'><h1 className="text-center text-danger">Toyota Corolla</h1></Row>
          <Row className='row2'><p className="text-center">Is this your car?</p></Row>
-         <Row className='row5'>
-                  <Row>
-                      <Col xs={8}>
-                          <h4 className="text-white py-3">Toyota Corolla</h4>
-                      </Col>
-                      <Col xs={4} className="text-end">
-                          <button className="cbtn border-none px-4 py-2 m-3 text-danger" style={{ backgroundColor: 'white', boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.9)' }}>Not Yours</button>
-                      </Col>
-                  </Row>
-            </Row>
-            <Row className="rowC4">
-                  <Col xs={6} className="p-4">Make</Col>
-                  <Col xs={6} className="p-4 pe-5 text-end">Toyota</Col>
-            </Row>
-            <Row className="rowC4">
-                  <Col xs={6} className="p-4">model</Col>
-                  <Col xs={6} className="p-4 pe-5 text-end">Corolla</Col>
-            </Row>
-            <Row className="rowC4">
-                  <Col xs={6} className="p-4">Fuel type</Col>
-                  <Col xs={6} className="p-4 pe-5 text-end">Petrol</Col>
-            </Row>
-            <Row className="rowC4">
-                  <Col xs={6} className="p-4">year of Manufacture</Col>
-                  <Col xs={6} className="p-4 pe-5 text-end">2012</Col>
-            </Row>
-
+         
+            <Row className='row5'>
+                    <Row>
+                        <Col xs={8}>
+                            <h4 className="text-white py-3">Toyota Corolla</h4>
+                        </Col>
+                        <Col xs={4} className="text-end">
+                            <button   onClick={navigatevehichel2 } className="cbbtn border-none px-4 py-2 m-3 text-danger" style={{ backgroundColor: 'white', boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.9)' }}>Not Yours</button>
+                        </Col>
+                    </Row>
+                </Row>
+               
+                <Row className="rowC4">
+                    <Col xs={6} className="p-4">Registration number</Col>
+                    <Col xs={6} className="p-4 pe-5 text-end">Gt 2567 - 23 </Col>
+                </Row>
+                <Row className="rowC4">
+                    <Col xs={6} className="p-4">Make</Col>
+                    <Col xs={6} className="p-4 pe-5 text-end">Toyota</Col>
+                </Row>
+                <Row className="rowC4">
+                    <Col xs={6} className="p-4">model</Col>
+                    <Col xs={6} className="p-4 pe-5 text-end">Corolla</Col>
+                </Row>
+                <Row className="rowC4">
+                    <Col xs={6} className="p-4">Fuel type</Col>
+                    <Col xs={6} className="p-4 pe-5 text-end">Petrol</Col>
+                </Row>
+                <Row className="rowC4">
+                    <Col xs={6} className="p-4">year of Manufacture</Col>
+                    <Col xs={6} className="p-4 pe-5 text-end">2012</Col>
+                </Row>
+          
          </Container>
          <br />
          <br />
@@ -44,15 +72,17 @@ const Carconfirmation = () => {
                   <h4 className=" text-white py-3">Purchase Information and Value </h4>
             </Row>
             <Row className="rowC4">
-                  <Col xs={6} className="p-4">Have you purchased this car?</Col>
-                  <Col xs={6} className="p-4 text-end">Toyota</Col>
-            </Row>
-            <Row className="rowC4">
-                  <Col xs={6} className="p-4">model</Col>
+                  <Col xs={6} className="p-4">Have you registered this car?</Col>
                   <Col xs={6} className="p-4 d-flex justify-content-end">
                       <button className="btn btn-success me-3 ps-5 pe-5 text-center">Yes</button>
                       <button className="btn btn-danger ps-5 pe-5 text-center">No</button>
                 </Col>
+                 
+            </Row>
+            <Row className="rowC4">
+                  <Col xs={6} className="p-4">model</Col>
+                  <Col xs={6} className="p-4 text-end">Toyota</Col>
+                  
             </Row>
             <Row className="rowC4">
                   <Col className="p-4">When did you buy it?</Col>
@@ -75,7 +105,7 @@ const Carconfirmation = () => {
               <Row>
                   <Col xs={6}></Col>
                   <Col xs={6} className="d-flex justify-content-end">
-                      <button className="btn btn-success py-3 px-5 my-3">Continue</button>
+                      <button  onClick={ navigatedriverBio}className="btn btn-success py-3 px-5 my-3">Continue</button>
                   </Col>
               </Row>
         </Container>

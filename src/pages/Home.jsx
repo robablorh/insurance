@@ -14,15 +14,13 @@ import { Link } from 'react-router-dom'
 import ins from '../images/ins.png'
 import third from '../images/car3.png'
 import theft from '../images/theft.jpeg'
-import Navbar1 from "../components/Navbar1"
-import Navbar2 from "../components/Navbar2"
+import Navbar1 from "../components/Navbar1";
 
 
 const Home = () => {
   return (
     <>
-      <Navbar1 />
-      <Navbar2 />
+      <Navbar1/>
       <div>
 
         <Carousel>
