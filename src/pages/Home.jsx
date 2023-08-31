@@ -16,6 +16,8 @@ import third from '../images/car3.png'
 import theft from '../images/theft.jpeg'
 import Navbar1 from "../components/Navbar1"
 import Navbar2 from "../components/Navbar2"
+import About from "./About";
+import "../App.css";
 
 
 const Home = () => {
@@ -76,13 +78,10 @@ const Home = () => {
 
           <Carousel.Item>
             <img
-
-
               src={caro5}
               height="600"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
-
             />
             <Carousel.Caption>
               <h3>Forth slide label</h3>
@@ -92,113 +91,64 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-
-
-        <h1 className="h1head">Insurance Companies</h1>
-
-
+        <About />
+        <h1 className="h1head text-primary">Insurance Companies</h1>
         <Container>
-
-          <Row>
-
+       <Row>
             <Col className="card1">
               <Link>
-
-                <Card style={{ width: '18rem', height: '300px' }}>
+              <Card style={{ width: '18rem', height: '300px' }}>
                   <Card.Img variant="top" src={alli} />
-
                 </Card>
-
               </Link>
-
             </Col>
-
-
-
             <Col className="card2">
               <Link>
-
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={star} />
-
                 </Card>
-
               </Link>
-
             </Col>
-
-
-
-
             <Col className="card3">
               <Link>
-
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={pri} />
-
                 </Card>
-
               </Link>
-
             </Col>
-
           </Row>
           <Row>
             <Col className='card4'>
               <Link>
-
                 <Card style={{ width: '18rem', }}>
                   <Card.Img variant="top" src={pru} />
-
-                </Card>
-
+               </Card>
               </Link>
             </Col>
-
-
-
-
             <Col className="card5">
               <Link>
-
                 <Card style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={phoe} />
-
                 </Card>
-
               </Link>
-
-
-            </Col>
+           </Col>
             <Col className="card6">
-
               <Link>
-
                 <Card style={{ width: '18rem', height: '300px' }}>
                   <Card.Img variant="top" src={ent} />
-
                 </Card>
-
               </Link>
             </Col>
-
           </Row>
-
         </Container>
-
-
-        <h1 className="h2head">INSURANCE COVER AVAILABLE</h1>
-        <Container className="foot">
-
-
+        <h1 className="h2head text-primary">INSURANCE COVER AVAILABLE</h1>
+        <Container className="cover">
           <Row>
-
             <Col>
               <img
                 src={ins}
                 height="300"
                 width="300"
-
               />
               <h3>Comprehensive</h3>
 
@@ -212,8 +162,6 @@ const Home = () => {
 
               />
               <h3>Third-Party</h3>
-
-
             </Col>
             <Col>
               <img
@@ -223,17 +171,9 @@ const Home = () => {
 
               />
               <h3 className="tparty">Third Party Fire and Theft </h3>
-
-
-
-
             </Col>
           </Row>
-
-
-
         </Container>
-
       </div>
     </>
   )

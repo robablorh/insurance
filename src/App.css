@@ -26,4 +26,27 @@
   margin-left: 0;
 }
 
+/* Start of Styling for the About Us Page */
 
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  height: 30rem;
+   filter:brightness(60%); 
+   border-radius: 2rem;
+   box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
+   transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.2);
+}
+
+.cover{
+  margin-bottom: 100px;
+  /* background-color:rgb(227, 227, 233) */
+}
+
+/* End of styling for the About Us Page */

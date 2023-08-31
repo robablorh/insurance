@@ -10,6 +10,8 @@ import ThreeMonths from "./components/ThreeMonths"
 import Vehichel1 from "./components/Vehichel1"
 import Vehichel2 from "./components/Vehichel2"
 import Sixmonths from "./components/Sixmonths"
+import About from "./pages/About"
+import Signin from "./pages/Signin"
 
 
 
@@ -23,8 +25,10 @@ function App() {
 
   return (
     <>
+    <Signin />
+    {/* <About /> */}
     {/* <Sixmonths /> */}
-    <Vehichel2 /> 
+    {/* <Vehichel2 />  */}
     {/* <Vehichel1 />
     {/* <ThreeMonths/> */}
     {/* <InsuranceTypes /> */}
