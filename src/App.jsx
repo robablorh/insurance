@@ -15,6 +15,8 @@ import Signin from "./pages/Signin"
 
 
 import Router from "./Router"
+import Certificate from "./pages/Certificate"
+
 
 
 
@@ -26,6 +28,7 @@ function App() {
 <div>
 
   <Router/>
+  <Certificate/>
 
 
 
