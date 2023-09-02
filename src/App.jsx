@@ -29,7 +29,7 @@ function App() {
     {/* <About /> */}
     {/* <Sixmonths /> */}
     {/* <Vehichel2 />  */}
-    {/* <Vehichel1 />
+    {/* <Vehichel1 />  */}
     {/* <ThreeMonths/> */}
     {/* <InsuranceTypes /> */}
     {/* <DriverBio /> */}
