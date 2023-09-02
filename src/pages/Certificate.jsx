@@ -7,8 +7,11 @@ const Certificate = () => {
     <div>
         
      <Container className=''>
+     
         <Row className="flex justify-content-center align-items-center mt-5  cert" style={{ width: "60.6%" }}>
-            <Col>
+            <h3 className='sticker'>Name of Insurance Company</h3>
+            <p className='sticker'>National Insurance Commision</p>
+            <Col className='certi'>
                 <p>Car No : GR 234-19</p>
                 <p>Make: BMW</p>
                 <p>Color: Navy Blue</p>
@@ -20,11 +23,11 @@ const Certificate = () => {
             
             
             </Col>
-            <Col>
+            <Col className='barcode'>
               <img
               src={code}
-              height="220"
-              width="250"
+              height="200"
+              width="200"
               
               
               />
