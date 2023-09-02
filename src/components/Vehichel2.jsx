@@ -1,6 +1,19 @@
 import {Col, Container , Row, } from 'react-bootstrap'
 
+import {useNavigate} from "react-router-dom"
+
+
+
+
 const Vehichel2 = () => {
+
+const navigate = useNavigate();
+
+const navigatecarconfirmation =()=>{
+  navigate('/carconfirmation');
+
+}
+
   return (
     <div className="w-50 m-auto pt-5 mt-5">
       <Container className='flex justify-content-center align-items-center mt-3'>
@@ -85,14 +98,10 @@ const Vehichel2 = () => {
           </Row>
           <Row className="">
             <Col md={{ span: 8, offset: 4 }}>
-              <input type="submit" value="Show Results" className="btn btn-primary py-3 px-4" style={{marginLeft: "17.6rem", marginTop: "1.2rem"}}/>
+              <input onClick={navigatecarconfirmation} type="submit" value="Show Results" className="btn btn-primary py-3 px-4" style={{marginLeft: "17.6rem", marginTop: "1.2rem"}}/>
             </Col>
           </Row>
         </Container>
-
-
-
- 
 </Container>
 
 

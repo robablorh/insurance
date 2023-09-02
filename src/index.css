@@ -24,8 +24,8 @@ box-sizing: border-box;
 
 /*Nav2 styles*/
 
-.na2links{
-  margin-left:500px;
+.n2links{
+    margin-left: 600px;
 }
 
 
@@ -151,24 +151,28 @@ box-sizing: border-box;
 /*Dashboard*/
 .row5{
     background-color: rgb(87, 119, 207);
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid rgb(39, 39, 121);
+    height: 70px;
+    padding-top: 15px;
+    color: white;
     
 
 }
 .row3{
     background-color: rgb(194, 210, 216);
     height: 100px;
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid gray;
    
 }
 .row4{
     background-color: rgb(194, 210, 216); 
    
-    height: 200px;
-    width: 800px;
+    height: 150px;
+    width: 1300px;
     border-bottom: 3px solid gray;
+    padding-top: 20px;
     
 }
 
@@ -214,6 +218,62 @@ box-sizing: border-box;
     background-color: rgb(194, 210, 216); 
    
     height: 80px;
-    width: 800px;
+    width: 1300px;
     border-bottom: 3px solid gray;
+}
+.btn-group{
+    margin-top: 60px;
+    
+}
+
+.wholebox{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+
+.vehinp{
+
+     margin-left: 40px;
+     width: 300px;
+     height: 40px;
+
+
+}
+
+.vehinpp{
+
+    margin-left: 40px;
+    width: 100px;
+    height: 40px;
+
+
+}
+.cbbtn{
+    width: 150px;
+    margin-top: 60px;
+
+}
+
+.combtn{
+    margin-left: 900px;
+}
+
+.brk{
+    width: 450px;
+}
+.shifttypes{
+    margin-left: 450px;
+}
+.covers{
+    text-align: center;
+}
+.cert{
+    border: 3px solid black;
+    padding: 30px;
+    background-image: url('./images/Untitled.jpeg');
+    background-size: 100px;
+    font-size: 21px;
+    font-weight: bolder;
+    
 }

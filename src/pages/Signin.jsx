@@ -2,8 +2,19 @@
 import { Container, Row, Col } from "react-bootstrap";
 import signinpng from "../images/signin.png";
 import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Signin = () => {
+
+ const navigate = useNavigate()
+   
+ const navigateDashboard = () => {
+  
+  navigate('/dashboard');
+};
+
+
+
   return (
     <div style={{ backgroundColor: "", height: "100vh" }}>
       <Container className="cont">
@@ -54,9 +65,8 @@ const Signin = () => {
                   Login
                 </button>
 
-                <p className="sinp">
-                  Don't have an account? <Link to="/signup">Sign Up</Link>
-                </p>
+                <input  onClick={navigateDashboard}  className="sibtn" type="submit" value="login"/>
+                <p className="sinp">You do not have an account? <Link to='/signup'>Sign-up</Link></p>
               </form>
             </div>
           </Col>

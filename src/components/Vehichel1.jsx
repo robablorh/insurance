@@ -1,6 +1,23 @@
 import { Container, Row, Col } from "react-bootstrap"
+import {useNavigate} from "react-router-dom"
 
 const Vehichel1 = () => {
+
+const navigate = useNavigate();
+
+const navigatecarconfirmation =()=>{
+  navigate('/carconfirmation');
+
+}
+  const navigatevehichel2 =() =>{
+     
+    navigate('/vehichel2');
+  }
+
+  
+
+
+
   return (
     <div className="w-50 m-auto pt-5 mt-5">
       <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
@@ -20,14 +37,14 @@ const Vehichel1 = () => {
           <Col><p className='prow'>Do you know the chasis number of your car?</p></Col>
           <Col>
             <button className='robtn'>Yes</button>
-            <button className='robtn'>No</button>
+            <button onClick={navigatevehichel2} className='robtn'>No</button>
           </Col>
         </Row>
         <Row className='row4 ms-2' style={{ width: "100%" }}>
           <form>
             <label className='lach'>Chasis Number :</label>
             <input className='labin' type='text' name='chasis' />
-            <input className='find btn btn-success' type='submit' value='Find Car' />
+            <input onClick={navigatecarconfirmation} className='find btn btn-success' type='submit' value='Find Car' />
           </form>
         </Row>
 

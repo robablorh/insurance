@@ -14,6 +14,7 @@ import About from "./pages/About"
 import Signin from "./pages/Signin"
 
 
+import Router from "./Router"
 
 
 
@@ -21,27 +22,14 @@ import Signin from "./pages/Signin"
 
 
 function App() {
+  return( 
+<div>
+
+  <Router/>
 
 
-  return (
-    <>
-    <Signin />
-    {/* <About /> */}
-    {/* <Sixmonths /> */}
-    {/* <Vehichel2 />  */}
-    {/* <Vehichel1 />  */}
-    {/* <ThreeMonths/> */}
-    {/* <InsuranceTypes /> */}
-    {/* <DriverBio /> */}
-    {/* <Carconfirmation /> */}
-    {/* <Companies /> */}
-    {/* <Dashboard /> */}
-    {/* <DashNav /> */}
-    {/* <Home /> */}
-{/* <Companies/> */}
- 
-    </>
+
+</div>
   )
 }
-
 export default App

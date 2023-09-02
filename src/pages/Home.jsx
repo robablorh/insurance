@@ -1,9 +1,9 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
 import car from "../images/car.jpeg"
 import caro2 from "../images/caro2.jpeg"
 import caro4 from "../images/caro4.jpeg"
 import caro5 from "../images/caro5.jpeg"
 import Carousel from 'react-bootstrap/Carousel';
+<<<<<<< HEAD
 import ent from '../images/enterprise.png'
 import phoe from '../images/phoenix.png'
 import pri from '../images/Priority.png'
@@ -19,12 +19,14 @@ import Navbar2 from "../components/Navbar2"
 import About from "./About";
 import "../App.css";
 
+=======
+import Navbar1 from "../components/Navbar1";
+>>>>>>> 149d3ad23b695493d7cae4fabc500292b25f1ef5
 
 const Home = () => {
   return (
     <>
-      <Navbar1 />
-      <Navbar2 />
+      <Navbar1/>
       <div>
 
         <Carousel>
@@ -32,65 +34,50 @@ const Home = () => {
             <img
 
               src={car}
-              height="600"
+              height="720"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
 
             />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
+            
           </Carousel.Item>
 
           <Carousel.Item interval={500}>
             <img
 
               src={caro2}
-              height="600"
+              height="720"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
 
             />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+           
           </Carousel.Item>
           <Carousel.Item>
 
             <img
 
               src={caro4}
-              height="600"
+              height="720"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
 
 
             />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            
           </Carousel.Item>
 
           <Carousel.Item>
             <img
               src={caro5}
-              height="600"
+              height="720"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
             />
-            <Carousel.Caption>
-              <h3>Forth slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
+            
           </Carousel.Item>
         </Carousel>
+<<<<<<< HEAD
         <About />
         <h1 className="h1head text-primary">Insurance Companies</h1>
         <Container>
@@ -174,6 +161,13 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+=======
+
+
+       
+
+      
+>>>>>>> 149d3ad23b695493d7cae4fabc500292b25f1ef5
       </div>
     </>
   )
