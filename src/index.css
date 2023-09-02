@@ -24,8 +24,8 @@ box-sizing: border-box;
 
 /*Nav2 styles*/
 
-.na2links{
-  margin-left:500px;
+.n2links{
+    margin-left: 600px;
 }
 
 
@@ -268,4 +268,13 @@ box-sizing: border-box;
 }
 .covers{
     text-align: center;
+}
+.cert{
+    border: 3px solid black;
+    padding: 30px;
+    background-image: url('./images/Untitled.jpeg');
+    background-size: 100px;
+    font-size: 21px;
+    font-weight: bolder;
+    
 }

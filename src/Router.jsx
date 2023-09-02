@@ -16,6 +16,8 @@ import InsuranceTypes from "./components/InsuranceTypes"
 import ThreeMonths from "./components/ThreeMonths"
 import Sixmonths from "./components/Sixmonths"
 import Oneyear from "./components/Oneyear"
+import Insurancecovers from "./pages/Insurancecovers"
+
 
 
 
@@ -43,6 +45,8 @@ import Oneyear from "./components/Oneyear"
         <Route path='/threemonths' element={<ThreeMonths/>}/>
         <Route path='/sixmonths' element={<Sixmonths/>}/>
         <Route path='/oneyear' element={<Oneyear/>}/>
+        <Route path='/insurancecovers' element={<Insurancecovers/>}/>
+        <Route path='/autoinsurance' element={<Autoinsurance/>}/>
       
 
 

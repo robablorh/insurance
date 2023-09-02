@@ -9,6 +9,13 @@ import { Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import logo from '../images/newlogo.png'
 
+
+
+
+
+
+
+
 const Navbar1 = () => {
 
   const navigate = useNavigate()
@@ -73,19 +80,17 @@ const Navbar1 = () => {
          </Navbar.Brand>
          <Navbar.Toggle aria-controls="basic-navbar-nav" />
          <Navbar.Collapse id="basic-navbar-nav">
-           <Nav className="mx-auto"> 
+           <Nav className="mx-auto" > 
              <Nav.Link>
                <Link className="n2links" to='/'>Home</Link>
              </Nav.Link>
-             <Nav.Link className="n2links">
-               <Link to='/companies'>Insurance Companies</Link>
+             <Nav.Link className="n22links">
+               <Link to='/autoinsurance'>Insurance Companies</Link>
              </Nav.Link>
-             <Nav.Link className="n2links">
-               <Link to='/autoinsurance'>Auto-Insurance News</Link>
+             <Nav.Link className="n22links">
+               <Link to='/insurancecovers'>Auto-Insurance News</Link>
              </Nav.Link>
-             <Nav.Link className="n2links">
-               <Link to='/quote'>Get a Quote</Link> 
-             </Nav.Link>
+            
            </Nav>
          </Navbar.Collapse>
        </Container>

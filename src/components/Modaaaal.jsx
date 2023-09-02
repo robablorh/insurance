@@ -1,7 +1,5 @@
 import  { useState } from 'react';
 import {Container, Col, Row} from 'react-bootstrap'
-
-
 import { PaystackButton } from 'react-paystack';
 
 const Modaaaal = () => {
