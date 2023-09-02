@@ -114,7 +114,9 @@ box-sizing: border-box;
 
  }
  .sign{
-   border: 2px solid rgb(97, 144, 245);
+   /* border: 2px solid rgb(97, 144, 245); */
+   margin-top: 4rem;
+   
  }
 
  .sibtn{
@@ -175,10 +177,9 @@ box-sizing: border-box;
 }
 
 .robtn{
-    height: 40px;
-    width: 150px;
-    border-radius: 7px;
-
+    height: 30px;
+    width: 100px;
+    margin-left: 3rem;
     margin-top: 30px;
 }
 .prow{
@@ -188,19 +189,17 @@ box-sizing: border-box;
     margin-top: 30px;
 }
 .labin{
-    width: 750px;
-    margin-left: 20px;
+    width: 60%;
+    margin-left:8rem;
     height: 40px;
    
 }
 .find{
     margin-top: 50px;
-    margin-left: 900px;
+    margin-left: 28rem;
     width: 200px;
-    height: 50px;
-    background-color: rgb(46, 46, 217);
-    border-radius: 7px;
-    color: white;
+    height: 40px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 .dashcont{
     border: 3px solid gray;
@@ -209,8 +208,8 @@ box-sizing: border-box;
 }
 .v2row3{
     background-color: rgb(194, 210, 216);
-    height: 400px;
-    width: 1300px;
+    height: 5rem;
+    width: 100%;
    border-bottom: 3px solid gray;
     
 }
