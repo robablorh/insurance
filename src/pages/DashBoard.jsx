@@ -5,13 +5,20 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import '../App.css';
 
 import Vehichel1 from '../components/Vehichel1';
+import Vehichel2 from '../components/Vehichel2';
 
 const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showVehichel2, setShowVehichel2] = useState(false);
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
+  const handleNoClick = () => {
+    setShowVehichel2(true);
+  };
+
 
   return (
     <div className="dashboard">
@@ -58,10 +65,9 @@ const Dashboard = () => {
       <Container  className=''>
 
 
-            <Row>
-              <Vehichel1/>
-
-            </Row>
+        <Row>
+          {showVehichel2 ? <Vehichel2 /> : <Vehichel1 handleNoClick={handleNoClick} />}
+        </Row>
 
           
 

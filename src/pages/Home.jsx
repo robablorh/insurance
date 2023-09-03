@@ -3,25 +3,7 @@ import caro2 from "../images/caro2.jpeg"
 import caro4 from "../images/caro4.jpeg"
 import caro5 from "../images/caro5.jpeg"
 import Carousel from 'react-bootstrap/Carousel';
-<<<<<<< HEAD
-import ent from '../images/enterprise.png'
-import phoe from '../images/phoenix.png'
-import pri from '../images/Priority.png'
-import pru from '../images/prudential.jpeg'
-import star from '../images/star.jpeg'
-import alli from '../images/alli.jpeg'
-import { Link } from 'react-router-dom'
-import ins from '../images/ins.png'
-import third from '../images/car3.png'
-import theft from '../images/theft.jpeg'
-import Navbar1 from "../components/Navbar1"
-import Navbar2 from "../components/Navbar2"
-import About from "./About";
-import "../App.css";
-
-=======
 import Navbar1 from "../components/Navbar1";
->>>>>>> 149d3ad23b695493d7cae4fabc500292b25f1ef5
 
 const Home = () => {
   return (
@@ -61,8 +43,6 @@ const Home = () => {
               height="720"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
-
-
             />
             
           </Carousel.Item>
@@ -76,98 +56,7 @@ const Home = () => {
             />
             
           </Carousel.Item>
-        </Carousel>
-<<<<<<< HEAD
-        <About />
-        <h1 className="h1head text-primary">Insurance Companies</h1>
-        <Container>
-       <Row>
-            <Col className="card1">
-              <Link>
-              <Card style={{ width: '18rem', height: '300px' }}>
-                  <Card.Img variant="top" src={alli} />
-                </Card>
-              </Link>
-            </Col>
-            <Col className="card2">
-              <Link>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={star} />
-                </Card>
-              </Link>
-            </Col>
-            <Col className="card3">
-              <Link>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={pri} />
-                </Card>
-              </Link>
-            </Col>
-          </Row>
-          <Row>
-            <Col className='card4'>
-              <Link>
-                <Card style={{ width: '18rem', }}>
-                  <Card.Img variant="top" src={pru} />
-               </Card>
-              </Link>
-            </Col>
-            <Col className="card5">
-              <Link>
-                <Card style={{ width: '18rem' }}>
-                  <Card.Img variant="top" src={phoe} />
-                </Card>
-              </Link>
-           </Col>
-            <Col className="card6">
-              <Link>
-                <Card style={{ width: '18rem', height: '300px' }}>
-                  <Card.Img variant="top" src={ent} />
-                </Card>
-              </Link>
-            </Col>
-          </Row>
-        </Container>
-        <h1 className="h2head text-primary">INSURANCE COVER AVAILABLE</h1>
-        <Container className="cover">
-          <Row>
-            <Col>
-              <img
-                src={ins}
-                height="300"
-                width="300"
-              />
-              <h3>Comprehensive</h3>
-
-            </Col>
-            <Col>
-
-              <img
-                src={third}
-                height="300"
-                width="300"
-
-              />
-              <h3>Third-Party</h3>
-            </Col>
-            <Col>
-              <img
-                src={theft}
-                height="200"
-                width="300"
-
-              />
-              <h3 className="tparty">Third Party Fire and Theft </h3>
-            </Col>
-          </Row>
-        </Container>
-=======
-
-
-       
-
-      
->>>>>>> 149d3ad23b695493d7cae4fabc500292b25f1ef5
+        </Carousel>    
       </div>
     </>
   )

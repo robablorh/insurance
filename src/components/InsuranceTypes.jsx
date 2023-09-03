@@ -1,7 +1,7 @@
 import { Container,Row} from "react-bootstrap"
 import ThreeMonths from "./ThreeMonths"
 import { useNavigate } from "react-router-dom"
-// import Modaaaal from "./Modaaaal"
+import Modaaaal from "./Modaaaal"
 
 const InsuranceTypes = () => {
   const navigate = useNavigate()
@@ -47,7 +47,7 @@ const InsuranceTypes = () => {
           <ThreeMonths />
         </Row>
       </Container> 
-   {/* <Modaaaal/> */}
+   <Modaaaal/>
     </div>
   )
 }

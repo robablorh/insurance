@@ -151,7 +151,7 @@ box-sizing: border-box;
 /*Dashboard*/
 .row5{
     background-color: rgb(87, 119, 207);
-    width: 1300px;
+    width: 100%;
     border-bottom: 3px solid rgb(39, 39, 121);
     height: 70px;
     padding-top: 15px;
@@ -170,7 +170,7 @@ box-sizing: border-box;
     background-color: rgb(194, 210, 216); 
    
     height: 150px;
-    width: 1300px;
+    width: 100%;
     border-bottom: 3px solid gray;
     padding-top: 20px;
     
@@ -190,15 +190,19 @@ box-sizing: border-box;
 }
 .labin{
     width: 60%;
-    margin-left:8rem;
+    margin-left:14rem;
     height: 40px;
    
 }
 .find{
     margin-top: 50px;
-    margin-left: 28rem;
+    margin-left: 24rem;
     width: 200px;
     height: 40px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.box{
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 .dashcont{
@@ -218,7 +222,7 @@ box-sizing: border-box;
     background-color: rgb(194, 210, 216); 
    
     height: 80px;
-    width: 1300px;
+    width: 100%;
     border-bottom: 3px solid gray;
 }
 .btn-group{
@@ -288,10 +292,7 @@ box-sizing: border-box;
 .sticker{
     text-align: center;
 }
-.certi{
-     
-    
-}
+
 
 .barcode{
     margin-left: 100px;

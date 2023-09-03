@@ -61,9 +61,9 @@ const Signin = () => {
                   </Link>
                 </div>
 
-                <button type="submit" className="btn btn-primary sibtn">
+                {/* <button type="submit" className="btn btn-primary sibtn">
                   Login
-                </button>
+                </button> */}
 
                 <input  onClick={navigateDashboard}  className="sibtn" type="submit" value="login"/>
                 <p className="sinp">You do not have an account? <Link to='/signup'>Sign-up</Link></p>
