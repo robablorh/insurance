@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Container,Row,Col} from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
+import Dashboard from "../pages/DashBoard";
 
 
 
@@ -33,6 +34,7 @@ const Carconfirmation = () => {
       }
 
   return(
+    <>
     <div className="w-50 m-auto">
          <Container className="" >
 
@@ -138,6 +140,9 @@ const Carconfirmation = () => {
                                   <input type="text" name='value' className="form-control" />
                               </Col>
                           </Row>
+                  </>
+              )}
+
                           <Row>
                               <Col xs={6}></Col>
                               <Col xs={6} className="d-flex justify-content-end">
@@ -145,11 +150,10 @@ const Carconfirmation = () => {
                               </Col>
                           </Row>
                       
-                  </>
-              )}
-
+              
         </Container>
     </div>
+      </>
   )
 }
 

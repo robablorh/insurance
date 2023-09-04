@@ -6,10 +6,10 @@ const DriverBio = () => {
   const navigate = useNavigate()
 
   const navigatetypes=()=>{
-    navigate('/threemonths')
+    navigate('/insurancetypes')
   }
   return (
-    <div className="">
+    <div className="w-50 m-auto">
       <Container >
         <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
           <button type="button" className="btn btn-primary" style={{ backgroundColor: "#007bff", padding: "1.5rem" }}>Vehicle</button>
@@ -28,8 +28,8 @@ const DriverBio = () => {
             <Form.Label column sm={3} className="mt-2">
               First Name:
             </Form.Label>
-            <Col sm={9}>
-              <Form.Control type="text" placeholder="Enter first name" style={{ width: "70%", marginBottom: "1rem", marginLeft: "1rem", marginTop: "1rem" }} />
+            <Col sm={9} className="d-flex justify-content-end">
+              <Form.Control  type="text" placeholder="Enter first name" style={{  marginBottom: "1rem", marginLeft: "1rem", marginTop: "1rem" }} />
             </Col>
           </Form.Group>
 
@@ -37,8 +37,8 @@ const DriverBio = () => {
             <Form.Label column sm={3}>
               Last Name:
             </Form.Label>
-            <Col sm={9}>
-              <Form.Control type="text" placeholder="Enter last name" style={{ width: "70%", marginBottom: "1rem" ,marginLeft: "1rem"}} />
+            <Col sm={9} className="d-flex justify-content-end">
+              <Form.Control type="text" placeholder="Enter last name" style={{ marginBottom: "1rem" ,marginLeft: "1rem"}} />
             </Col>
           </Form.Group>
 
@@ -46,8 +46,8 @@ const DriverBio = () => {
             <Form.Label column sm={3}>
               Email Address:
             </Form.Label>
-            <Col sm={9}>
-              <Form.Control type="email" placeholder="Enter email" style={{ width: "70%", marginBottom: "1rem", marginLeft: "1rem" }} />
+            <Col sm={9} className="d-flex justify-content-end">
+              <Form.Control type="email" placeholder="Enter email" style={{ marginBottom: "1rem", marginLeft: "1rem" }} />
             </Col>
           </Form.Group>
 
@@ -55,8 +55,8 @@ const DriverBio = () => {
             <Form.Label column sm={3}>
               Home Address:
             </Form.Label>
-            <Col sm={9}>
-              <Form.Control type="text" placeholder="Enter home address" style={{ width: "70%", marginBottom: "1rem", marginLeft: "1rem" }} />
+            <Col sm={9} className="d-flex justify-content-end">
+              <Form.Control type="text" placeholder="Enter home address" style={{ marginBottom: "1rem", marginLeft: "1rem" }} />
             </Col>
           </Form.Group>
 
@@ -64,16 +64,16 @@ const DriverBio = () => {
             <Form.Label column sm={3}>
               Contact:
             </Form.Label>
-            <Col sm={9}>
-              <Form.Control type="text" placeholder="Enter contact number" style={{ width: "70%", marginBottom: "1rem", marginLeft: "1rem" }} />
+            <Col sm={9} className="d-flex justify-content-end">
+              <Form.Control type="text" placeholder="Enter contact number" style={{marginBottom: "1rem", marginLeft: "1rem" }} />
             </Col> 
           </Form.Group>
           
 
         </Form>
       </Container>
-      <div className="d-flex justify-content-end mt-4" style={{ width: "76.9%" }}>
-        <Button onClick={navigatetypes}className="py-3 px-4" variant="primary" type="submit">
+      <div className="d-flex justify-content-end mt-4">
+        <Button onClick={navigatetypes}className="py-3 px-4 me-3" variant="primary" type="submit">
           Continue
         </Button>
       </div>

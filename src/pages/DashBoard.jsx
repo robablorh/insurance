@@ -1,15 +1,26 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { Container, Row, Col, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../App.css';
 
 import Vehichel1 from '../components/Vehichel1';
 import Vehichel2 from '../components/Vehichel2';
+import Carconfirmation from '../components/Carconfirmation';
+import { useLocation } from 'react-router-dom';
+import DriverBio from '../components/DriverBio';
+
 
 const Dashboard = () => {
+  // const location = useLocation();
+ 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showVehichel2, setShowVehichel2] = useState(false);
+  const [showCarConfirmation, setShowCarConfirmation] = useState(false);
+  const [showDriverBio, setShowDriverBio] =useState(false);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  // const isCarconfirmationRoute = location.pathname === '/carconfirmation';
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen);
@@ -18,6 +29,12 @@ const Dashboard = () => {
   const handleNoClick = () => {
     setShowVehichel2(true);
   };
+
+  const handleButtonClick = () => {
+    setButtonClicked(true);
+  };
+
+
 
 
   return (
@@ -40,10 +57,10 @@ const Dashboard = () => {
         </Navbar.Collapse>
       </Navbar>
       {/* Main content */}
-      <div className="Main" style={{ backgroundColor: "#ededed" }}>
-        <Container fluid className="d-flex justify-content-center">
+      <div className="Main" style={{ backgroundColor: "#ededed", minHeight: "100vh", width:"100%" }}>
+        <Container fluid className="">
           <Row>
-            <Col md={3} className={`sidebar ${sidebarOpen ? 'open' : 'closed'} vh-100`} style={{ backgroundColor: '#0B6623', width: '250px'}}>
+            <Col md={2} className={`sidebar ${sidebarOpen ? 'open' : 'closed'} vh-100`} style={{ backgroundColor: '#0B6623', width: '250px'}}>
               <div className="close-icon" onClick={handleSidebarToggle} style={{ color: 'white', marginLeft: '13rem', marginTop:"1rem"}}>
                 <FaTimes />
               </div>
@@ -53,25 +70,29 @@ const Dashboard = () => {
                 <Nav.Link className='text-white' href="/contact">Contact</Nav.Link>
               </Nav>
             </Col>
-            <Col md={9} className={`content ${sidebarOpen ? '' : 'closed'}`} >
-              <div className="d-flex align-items-center justify-content-center ms-6">
-                
+            <Col md={10} className={`content ${sidebarOpen ? '' : 'closed'}`}  >
+              {!buttonClicked ? (
+              <div className="flex align-items-center justify-content-center ms-6">
+                <Button onClick={handleButtonClick}>Click to start</Button>
               </div>
+              ) : (
+              <Container className=''>
+                    <div>
+                      {showVehichel2 ? <Vehichel2 /> : <Vehichel1 handleNoClick={handleNoClick} />}
+                    </div>
+                    {showVehichel2 && (
+                      <div>
+                        <Carconfirmation />
+                      </div>
+                    )}
+            </Container>
+              )}
             </Col>
           </Row>
         </Container>
 
       </div>
-      <Container  className=''>
-
-
-        <Row>
-          {showVehichel2 ? <Vehichel2 /> : <Vehichel1 handleNoClick={handleNoClick} />}
-        </Row>
-
-          
-
-      </Container>
+     
     
     </div>
   );
