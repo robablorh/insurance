@@ -25,6 +25,7 @@ import Certificate from "./pages/Certificate"
 function App() {
   return( 
 <div>
+{/* <Companies /> */}
   <Router/>
   {/* <Certificate/> */}
 </div>

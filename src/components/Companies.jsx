@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { PaystackButton } from 'react-paystack';
 import Modal from 'react-bootstrap/Modal';
@@ -51,14 +51,14 @@ const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
   return (
     <div>
           <div>
-      <Button variant="primary" onClick={handleShow}>
-        Choose Company
-      </Button>
-
-      <Modal show={show} onHide={handleClose} size = "lg" className='my-modal'>
+        <Modal show={show} onHide={() => setShow(false)} size = "lg" className='my-modal'>
         <Modal.Header closeButton className='px-5'>
           <Modal.Title>INSURANCE COMPANIES</Modal.Title>
         </Modal.Header>

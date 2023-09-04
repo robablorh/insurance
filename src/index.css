@@ -162,7 +162,7 @@ box-sizing: border-box;
 .row3{
     background-color: rgb(194, 210, 216);
     height: 100px;
-    width: 1300px;
+    width: 100%;
     border-bottom: 3px solid gray;
    
 }
