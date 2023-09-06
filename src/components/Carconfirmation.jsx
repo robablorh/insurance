@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Container,Row,Col} from "react-bootstrap"
 import { useNavigate } from "react-router-dom";
-import Dashboard from "../pages/DashBoard";
+import Navbar2 from "../components/Navbar2";
 
 
 
@@ -35,6 +35,7 @@ const Carconfirmation = () => {
 
   return(
     <>
+    <Navbar2/>
     <div className="w-50 m-auto">
          <Container className="" >
 

@@ -18,7 +18,7 @@ const Oneyear = ({ insuranceType, duration }) => {
   };
 
   const calculateAmount = (insuranceType, duration) => {
-    if (duration === 'Six Months') {
+    if (duration === 'One Year') {
       switch (insuranceType) {
         case 'Comprehensive Insurance':
           return 2000;
@@ -36,7 +36,10 @@ const Oneyear = ({ insuranceType, duration }) => {
   return (
     <div className="w-100">
       <Container>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Comprehensive Insurance')}>
+        <Row style={{
+          backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer',transition: 'transform 0.3s ease', }} 
+          onClick={() => handleRowClick('Comprehensive Insurance')} onMouseEnter={(e) => {e.currentTarget.style.transform = 'scale(1.05)'; }} 
+          onMouseLeave={(e) => {e.currentTarget.style.transform = 'scale(1)';}}>
           <h4 className="text-danger">Comprehensive Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
             <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
@@ -61,7 +64,7 @@ const Oneyear = ({ insuranceType, duration }) => {
       {showCompaniesModal && (
         <div className="companies-modal">
           <div className="companies-modal-content">
-            <Companies insuranceType={selectedInsuranceType} duration="Six Months" insuranceAmount={insuranceAmount} />
+            <Companies insuranceType={selectedInsuranceType} duration="One Year" insuranceAmount={insuranceAmount} />
           </div>
         </div>
       )}

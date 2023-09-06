@@ -1,6 +1,7 @@
 
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import {useNavigate} from "react-router-dom"
+import  Navbar2 from "../components/Navbar2";
 
 const DriverBio = () => {
   
@@ -12,6 +13,9 @@ const DriverBio = () => {
  
 
   return (
+
+    <div>
+    <Navbar2 />
     <div className="w-50 m-auto">
       <Container >
         <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
@@ -80,6 +84,7 @@ const DriverBio = () => {
           Continue
         </Button>
       </div>
+    </div>
     </div>
   );
 };

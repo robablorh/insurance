@@ -1,6 +1,7 @@
 import {Col, Container , Row, } from 'react-bootstrap'
 
 import {useNavigate} from "react-router-dom"
+import Navbar2 from './Navbar2';
 
 
 const Vehichel2 = () => {
@@ -13,6 +14,8 @@ console.log("i am here")
 }
 
   return (
+    <>
+    <Navbar2 />
     <div className="w-50 m-auto pt-1 mt-1">
       <Container className='flex justify-content-center align-items-center mt-3'>
         <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
@@ -104,6 +107,7 @@ console.log("i am here")
 
 
 </div>
+    </>
   )
 }
 
