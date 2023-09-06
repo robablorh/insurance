@@ -8,9 +8,9 @@ const Signin = () => {
 
  const navigate = useNavigate()
    
- const navigateDashboard = () => {
+  const navigatevehichel1 = () => {
   
-  navigate('/dashboard');
+  navigate('/vehichel1');
 };
 
 
@@ -65,7 +65,7 @@ const Signin = () => {
                   Login
                 </button> */}
 
-                <input  onClick={navigateDashboard}  className="sibtn" type="submit" value="login"/>
+                <input  onClick={navigatevehichel1}  className="sibtn" type="submit" value="login"/>
                 <p className="sinp">You do not have an account? <Link to='/signup'>Sign-up</Link></p>
               </form>
             </div>

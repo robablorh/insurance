@@ -9,9 +9,7 @@ import PropTypes from 'prop-types';
 
 
 const Companies = ({ insuranceType ,duration, insuranceAmount}) => {
-
-
-    const publicKey = "pk_test_d423971de624b1b46e7372bebfcb33b19e41e9fa"
+  const publicKey = "pk_test_d423971de624b1b46e7372bebfcb33b19e41e9fa"
   const amount = insuranceAmount;
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -50,8 +48,6 @@ const Companies = ({ insuranceType ,duration, insuranceAmount}) => {
     return 0; // Default to 0 if insurance type or duration is not recognized
   };
  
- 
-
   const resetForm = (e) => {
     e.preventDefault();
 

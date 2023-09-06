@@ -6,7 +6,7 @@ import Sixmonths from "./Sixmonths"
 import Oneyear from "./Oneyear"
 import { useState } from "react"
 import Dashboard from "../pages/DashBoard"
-
+import Navbar2 from "../components/Navbar2";
 const InsuranceTypes = () => {
   // const navigate = useNavigate()
   const [activeButton, setActiveButton] = useState("threeMonths");
@@ -18,7 +18,7 @@ const InsuranceTypes = () => {
 
   return (
     <>
-  
+   <Navbar2/> 
     <div className="w-50 m-auto pt-5 mt-5">
       <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
         <button type="button" className="btn btn-primary" style={{ backgroundColor: "#007bff", padding: "1.5rem" }}>Vehicle</button>
