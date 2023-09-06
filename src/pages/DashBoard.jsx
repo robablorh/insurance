@@ -7,20 +7,19 @@ import '../App.css';
 import Vehichel1 from '../components/Vehichel1';
 import Vehichel2 from '../components/Vehichel2';
 import Carconfirmation from '../components/Carconfirmation';
-import { useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import DriverBio from '../components/DriverBio';
 
 
-const Dashboard = () => {
-  // const location = useLocation();
+const DashBoard = () => {
+
  
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [showVehichel2, setShowVehichel2] = useState(false);
-  const [showCarConfirmation, setShowCarConfirmation] = useState(false);
+  const [showCarConfirmation, setShowCarConfirmation] = useState(true);
   const [showDriverBio, setShowDriverBio] =useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
 
-  // const isCarconfirmationRoute = location.pathname === '/carconfirmation';
 
   const handleSidebarToggle = () => {
     setSidebarOpen(!sidebarOpen);
@@ -28,13 +27,17 @@ const Dashboard = () => {
 
   const handleNoClick = () => {
     setShowVehichel2(true);
+    console.log("show it")
   };
 
   const handleButtonClick = () => {
     setButtonClicked(true);
+    console.log("button clicked")
   };
 
-
+  const navigatecarconfirmation = () => {
+    setShowCarConfirmation(true);
+  };
 
 
   return (
@@ -79,23 +82,20 @@ const Dashboard = () => {
               <Container className=''>
                     <div>
                       {showVehichel2 ? <Vehichel2 /> : <Vehichel1 handleNoClick={handleNoClick} />}
-                    </div>
-                    {showVehichel2 && (
-                      <div>
-                        <Carconfirmation />
-                      </div>
-                    )}
+
+                    </div>       
             </Container>
               )}
+
+              <Container>
+                {showCarConfirmation === <Carconfirmation navigatecarconfirmation ={navigatecarconfirmation} />}
+              </Container>
             </Col>
           </Row>
         </Container>
-
       </div>
-     
-    
     </div>
   );
 };
 
-export default Dashboard;
+export default DashBoard;

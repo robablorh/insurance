@@ -1,3 +1,4 @@
+
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import {useNavigate} from "react-router-dom"
 
@@ -8,6 +9,8 @@ const DriverBio = () => {
   const navigatetypes=()=>{
     navigate('/insurancetypes')
   }
+ 
+
   return (
     <div className="w-50 m-auto">
       <Container >

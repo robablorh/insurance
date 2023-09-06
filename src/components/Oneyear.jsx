@@ -1,31 +1,55 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { Button, Container,Row} from "react-bootstrap"
 import Companies from "./Companies";
 import { useState } from "react";
 
-const Oneyear = () => {
+const Oneyear = ({ insuranceType, duration }) => {
 
   const [showCompaniesModal, setShowCompaniesModal] = useState(false);
+  const [selectedInsuranceType, setSelectedInsuranceType] = useState('');
+  const [insuranceAmount, setInsuranceAmount] = useState(0);
 
-  const handleRowClick = () => {
+  const handleRowClick = (selectedInsuranceType) => {
+    setSelectedInsuranceType(selectedInsuranceType);
+    const amount = calculateAmount(selectedInsuranceType, 'Six Months');
+    setInsuranceAmount(amount);
     setShowCompaniesModal(true);
+  };
+
+  const calculateAmount = (insuranceType, duration) => {
+    if (duration === 'Six Months') {
+      switch (insuranceType) {
+        case 'Comprehensive Insurance':
+          return 2000;
+        case 'Third-Party Insurance':
+          return 1500;
+        case 'Third-Party Fire and Theft Insurance':
+          return 1300;
+        default:
+          return 0;
+      }
+    } else {
+      return 0;
+    }
   };
   return (
     <div className="w-100">
       <Container>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={handleRowClick}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Comprehensive Insurance')}>
           <h4 className="text-danger">Comprehensive Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS 2000</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
         </Row>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={handleRowClick}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Third-Party Insurance')}>
           <h4 className="text-danger">Third-Party Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS 1400</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
         </Row>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={handleRowClick}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Third-Party Fire and Theft Insurance')}>
           <h4 className="text-danger">Third-Party Fire and Theft Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS 1000</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
         </Row>
         <div className="d-flex justify-content-end mt-4" style={{ width: "100%" }}>
           <Button className="py-3 px-4" variant="primary" type="submit">
@@ -37,7 +61,7 @@ const Oneyear = () => {
       {showCompaniesModal && (
         <div className="companies-modal">
           <div className="companies-modal-content">
-            <Companies />
+            <Companies insuranceType={selectedInsuranceType} duration="Six Months" insuranceAmount={insuranceAmount} />
           </div>
         </div>
       )}

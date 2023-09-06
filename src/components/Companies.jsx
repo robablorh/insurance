@@ -1,29 +1,81 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import { PaystackButton } from 'react-paystack';
 import Modal from 'react-bootstrap/Modal';
 import { Col, Row } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 
-const Companies = () => {
+const Companies = ({ insuranceType ,duration, insuranceAmount}) => {
 
 
     const publicKey = "pk_test_d423971de624b1b46e7372bebfcb33b19e41e9fa"
-  const amount = 10000;
+  const amount = insuranceAmount;
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  
 
-  const resetForm = () => {
-    setEmail('');
+  const calculateAmount = (insuranceType, duration) => {
+    if (insuranceType === 'Comprehensive Insurance') {
+      if (duration === '3 months') {
+        return 600;
+      } else if (duration === '6 months') {
+        return 1000;
+      } else if (duration === '1 year') {
+        return 2000;
+      }
+    } else if (insuranceType === 'Third-Party Insurance') {
+    
+      if (duration === '3 months') {
+        return 500;
+      } else if (duration === '6 months') {
+        return 600;
+      } else if (duration === '1 year') {
+        return 1500;
+      }
+    } else if (insuranceType === 'Third-Party Fire and Theft Insurance') {
+  
+      if (duration === '3 months') {
+        return 400;
+      } else if (duration === '6 months') {
+        return 800;
+      } else if (duration === '1 year') {
+        return 1300;
+      }
+    }
+
+    return 0; // Default to 0 if insurance type or duration is not recognized
+  };
+ 
+ 
+
+  const resetForm = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !phone) {
+      console.log('All fields are mandatory');
+      return;
+    }
+
+    const paymentData = {
+      name,
+      email,
+      phone,
+    };
+
+    console.log('Payment data:', paymentData);
+
     setName('');
+    setEmail('');
     setPhone('');
   };
 
   const componentProps = {
     email,
-    amount,
+    amount: amount * 100,
     currency: 'GHS',
     metadata: {
       name,
@@ -106,7 +158,8 @@ const [show, setShow] = useState(false);
                 <div>
                 <hr />
                 <h5 className='mb-3'>Please fill the form below to make payment</h5>
-              <form className=''>
+                  <h1>Amount: Ghs {amount}</h1>
+              <form onSubmit={resetForm} className=''>
                 <div className="form-group d-flex align-items-center">
                   <label className="form-label mb-4 me-4" htmlFor="name">Name: </label>
                   <input
@@ -155,5 +208,7 @@ const [show, setShow] = useState(false);
     </div>
   )
 }
+
+
 
 export default Companies

@@ -3,19 +3,17 @@ import {Col, Container , Row, } from 'react-bootstrap'
 import {useNavigate} from "react-router-dom"
 
 
-
-
 const Vehichel2 = () => {
 
 const navigate = useNavigate();
 
 const navigatecarconfirmation =()=>{
   navigate('/carconfirmation');
-
+console.log("i am here")
 }
 
   return (
-    <div className="w-50 m-auto pt-5 mt-5">
+    <div className="w-50 m-auto pt-1 mt-1">
       <Container className='flex justify-content-center align-items-center mt-3'>
         <div className="btn-group w-100" role="group" aria-label="Button group with 4 buttons">
           <button type="button" className="btn btn-primary" style={{ backgroundColor: "#007bff", padding: "1.5rem" }}>Vehicle</button>
@@ -51,7 +49,7 @@ const navigatecarconfirmation =()=>{
             </Col>
             <Col md={8}>
               <select name="fuelType" className="form-control mt-3">
-                <option value="" disabled selected hidden style={{color: "green"}}>Select Fuel Type</option>
+                <option value="" disabled hidden style={{color: "green"}}>Select Fuel Type</option>
                 <option value="petrol">Petrol</option>
                 <option value="diesel">Diesel</option>
               </select>
@@ -63,7 +61,7 @@ const navigatecarconfirmation =()=>{
             </Col>
             <Col md={8}>
               <select name="yearOfManufacture" className="form-control mt-3">
-                <option value="" disabled selected hidden>Select Year of Manufacture</option>
+                <option value="" disabled hidden>Select Year of Manufacture</option>
                 <option value="1995">1995</option>
                 <option value="1996">1996</option>
                 <option value="1997">1997</option>
@@ -96,9 +94,9 @@ const navigatecarconfirmation =()=>{
               </select>
             </Col>
           </Row>
-          <Row className="">
-            <Col md={{ span: 8, offset: 4 }}>
-              <input onClick={navigatecarconfirmation} type="submit" value="Show Results" className="btn btn-primary py-3 px-4" style={{marginLeft: "17.6rem", marginTop: "1.2rem"}}/>
+          <Row>
+            <Col md={{ span: 8, offset: 4 }} className="d-flex justify-content-end">
+              <input onClick={navigatecarconfirmation} type="submit" value="Show Results" className="btn btn-primary py-3 px-4" style={{marginTop: "1.2rem"}}/>
             </Col>
           </Row>
         </Container>

@@ -1,14 +1,23 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Vehichel1 = () => {
+  
   const navigate = useNavigate();
+  const [showCarConfirmation, setShowCarConfirmation] = useState(false);
+
   const navigatecarconfirmation = () => {
+    setShowCarConfirmation(true);
     navigate("/carconfirmation");
+    // console.log("it is working") 
   };
+
   const navigatevehichel2 = () => {
     navigate("/vehichel2");
+    // console.log("This one too is working") 
   };
 
   const [showForm, setShowForm] = useState(false);
