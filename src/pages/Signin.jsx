@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { Container, Row, Col } from "react-bootstrap";
 import signinpng from "../images/signin.png";
@@ -6,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios"
 import { useDispatch } from "react-redux";
-import { addUser } from "../redux/userSlice";
+// import { addUser } from "../redux/userSlice";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Signin = () => {
       const data = response.data
       console.log(data)
       if (data.success) {
-        //dispatch(addUser(data.data.name));
+        // dispatch(addUser(data.data.name));
         navigate("/vehichel1");
       }
      } catch (error) {
