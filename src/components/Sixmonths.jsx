@@ -36,20 +36,26 @@ const Sixmonths = ({ insuranceType, duration }) => {
   return (
     <div className="w-100">
       <Container>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Comprehensive Insurance')}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer', transition: 'transform 0.3s ease' }} onClick={() => handleRowClick('Comprehensive Insurance')}
+          onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}>
           <h4 className="text-danger">Comprehensive Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS 1000</h6></div>
         </Row>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Third-Party Insurance')}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer', transition: 'transform 0.3s ease' }} onClick={() => handleRowClick('Third-Party Insurance')}
+          onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}>
           <h4 className="text-danger">Third-Party Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS 600</h6></div>
         </Row>
-        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer' }} onClick={() => handleRowClick('Third-Party Fire and Theft Insurance')}>
+        <Row style={{ backgroundColor: "#C2D2D8", borderBottom: "3px solid gray", cursor: 'pointer', transition: 'transform 0.3s ease' }} onClick={() => handleRowClick('Third-Party Fire and Theft Insurance')}
+          onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}>
           <h4 className="text-danger">Third-Party Fire and Theft Insurance</h4>
           <div>Coverts death, bodily injury, damage to other persons property, fire, theft, windscreen and accidental damage to your car
-            <h6 className="mt-1 text-danger text-end"> GhS {insuranceAmount}</h6></div>
+            <h6 className="mt-1 text-danger text-end"> GhS 800</h6></div>
         </Row>
         <div className="d-flex justify-content-end mt-4" style={{ width: "100%" }}>
           <Button className="py-3 px-4" variant="primary" type="submit">
