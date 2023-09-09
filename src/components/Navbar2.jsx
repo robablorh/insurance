@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import {FiMenu} from 'react-icons/fi';
 
 function TextLinkExample() {
     const [show, setShow] = useState(false);
@@ -18,12 +17,12 @@ function TextLinkExample() {
                 <Navbar.Brand href="#home">
 
                     <Button variant="primary" onClick={handleShow}>
-                       <FiMenu />
+                        Launch
                     </Button>
 
                     <Offcanvas show={show} onHide={handleClose}>
                         <Offcanvas.Header closeButton>
-                            <Offcanvas.Title>Dashboard</Offcanvas.Title>
+                            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <ul>
