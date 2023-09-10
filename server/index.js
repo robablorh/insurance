@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const express = require('express')
 const dotenv = require("dotenv")
 const colors = require("colors")
@@ -14,7 +16,12 @@ const app = express()
 
 //middlewares 
 app.use(express.json())
-app.use(cors())
+
+const corsOptions = {
+  origin: "http://localhost:5173",
+  credentials: true,  // allow to server to accept request from different origin
+}
+app.use(cors(corsOptions))
 app.use(cookieParser());
 
 //base route

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const express = require("express");
 const signup /*allusers*/  = require("../controler/userControler");
 const login = require("../controler/loginControler")
@@ -7,7 +8,7 @@ const router = express.Router();
 
 router.post("/signup", signup);
 router.post("/login", login);
-router.post("/verify", userVerification);
+router.use(userVerification)
 //router.get("/allusers", allusers);
 
 

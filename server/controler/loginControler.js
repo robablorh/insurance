@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable no-undef */
 const usermodel = require("../model/userSignup")
 const bcrypt = require("bcrypt")
 const { secret } = require("../util/tokenkey");
@@ -33,8 +35,11 @@ const login  = async (req, res) => {
     const token = secret(user._id)
     res.cookie("token", token, {
       withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+      secure: false,
+      sameSite:"Lax",
     });
+    
     res.status(201).send(
         { 
             message: "User logged in successfully", 
