@@ -8,6 +8,8 @@ import { useState } from "react";
 import axios from "axios"
 import { useDispatch } from "react-redux";
 // import { addUser } from "../redux/userSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -34,7 +36,7 @@ const Signin = () => {
       const response = await axios.post(
         "http://localhost:3000/api/login",
         loginDetails,
-        //{ withCredentials: true }
+        { withCredentials: true }
       );
       console.log(response);
       const data = response.data
@@ -42,8 +44,11 @@ const Signin = () => {
       if (data.success) {
         // dispatch(addUser(data.data.name));
         navigate("/vehichel1");
+      } else{
+        toast.error(data.message)
       }
      } catch (error) {
+     
       console.error(error)
      }
   }
@@ -87,6 +92,8 @@ const Signin = () => {
                     onChange={handleChange}
                   />
                 </div>
+
+                <ToastContainer position="top-center" autoClose={3000} />
 
                 <div className="mb-3 form-check">
                   <input
