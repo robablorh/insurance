@@ -4,9 +4,11 @@ const express = require('express')
 const dotenv = require("dotenv")
 const colors = require("colors")
 const cookieParser = require("cookie-parser");
-const signUpRoute = require("./route/signupRoute")
+const signUpRoute = require("./route/signupRoute");
+const carDetailRoute = require("./route/carRoutes");
 const mongoose = require("mongoose");
 const cors = require("cors")
+const sentMail = require('./route/emailRoutes')
 
 dotenv.config();
 const { MONGO_URI, PORT } = process.env;
@@ -25,7 +27,9 @@ app.use(cors(corsOptions))
 app.use(cookieParser());
 
 //base route
-app.use("/api", signUpRoute);
+app.use("/api/car", carDetailRoute);
+app.use("/api/user", signUpRoute);
+app.use("/api/mail", sentMail);
 
 //axios.post("http://localhost:port/api/signup")
 

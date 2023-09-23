@@ -4,16 +4,19 @@ import { Container, Row, Col } from "react-bootstrap";
 import signinpng from "../images/signin.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useCookies} from "react-cookie"
 import axios from "axios"
 import { useDispatch } from "react-redux";
-// import { addUser } from "../redux/userSlice";
+import { addUser } from "../redux/userSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch()
+  const cookies = useCookies([])
+  
 
   const [loginDetails, setLoginDetails] = useState({
     email: "",
@@ -29,20 +32,20 @@ const Signin = () => {
     }
    ))
   }
-   console.log(loginDetails);
+   
   const handleSubmit = async (e) => {
     e.preventDefault()
      try {
       const response = await axios.post(
-        "http://localhost:3000/api/login",
+        "http://localhost:3000/api/user/login",
         loginDetails,
         { withCredentials: true }
       );
-      console.log(response);
+
+      
       const data = response.data
-      console.log(data)
       if (data.success) {
-        // dispatch(addUser(data.data.name));
+        dispatch(addUser(data.user));
         navigate("/vehichel1");
       } else{
         toast.error(data.message)

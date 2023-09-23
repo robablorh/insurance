@@ -39,11 +39,14 @@ const login  = async (req, res) => {
       secure: false,
       sameSite:"Lax",
     });
-    
     res.status(201).send(
         { 
             message: "User logged in successfully", 
-            success: true 
+            success: true,
+            user: {
+                name: user.name,
+                email: user.email
+            }
         }
     );
     //next();

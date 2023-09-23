@@ -16,6 +16,7 @@ import logo from '../images/newlogo.png'
 
 
 
+
 const Navbar1 = () => {
 
   const navigate = useNavigate()
@@ -29,6 +30,8 @@ const Navbar1 = () => {
     navigate('/signup');
   }
 
+  
+ 
 
   return (
     <div>
@@ -57,7 +60,7 @@ const Navbar1 = () => {
 
         <Nav className="justify-content-end" activeKey="/home">
           <Nav.Item>
-            <Nav.Link ><Link>Contact</Link></Nav.Link>
+            <Nav.Link ><Link to='/contact'>Contact</Link></Nav.Link>
           </Nav.Item>
         </Nav>
       </Container>
@@ -66,7 +69,7 @@ const Navbar1 = () => {
      <div>
      <Navbar expand="lg" className="bg-body-tertiary">
        <Container>
-         <Navbar.Brand href="#home">
+         <Navbar.Brand href="/">
            <div className="d-flex align-items-center"> {/* Used the d-flex to create a flex container */}
              <img
                alt=""
@@ -82,13 +85,13 @@ const Navbar1 = () => {
          <Navbar.Collapse id="basic-navbar-nav">
            <Nav className="mx-auto" > 
              <Nav.Link>
-               <Link className="n2links" to='/home'>Home</Link>
+               <Link className="n2links" to='/'>Home</Link>
              </Nav.Link>
              <Nav.Link className="n22links">
                <Link to='/autoinsurance'>Insurance Companies</Link>
              </Nav.Link>
              <Nav.Link className="n22links">
-               <Link to='/insurancecovers'>Auto-Insurance News</Link>
+               <Link to='/insurancecovers'>Insurance Covers</Link>
              </Nav.Link>
             
            </Nav>

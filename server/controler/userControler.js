@@ -1,3 +1,6 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const usermodel = require("../model/userSignup");
 const {secret} = require("../util/tokenkey");
 const bcrypt = require("bcrypt");
