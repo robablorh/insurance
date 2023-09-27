@@ -145,20 +145,6 @@ const Vehichel2 = () => {
             </Row>
             <Row className="v2row3">
               <Col md={4}>
-                <label className="mt-3">Color</label>
-              </Col>
-              <Col md={8}>
-                <input
-                  type="text"
-                  name="color"
-                  value={carInfo.color}
-                  onChange={handleChange}
-                  className="form-control mt-3"
-                />
-              </Col>
-            </Row>
-            <Row className="v2row3">
-              <Col md={4}>
                 <label className="mt-3">Model</label>
               </Col>
               <Col md={8}>
@@ -166,6 +152,20 @@ const Vehichel2 = () => {
                   type="text"
                   name="model"
                   value={carInfo.model}
+                  onChange={handleChange}
+                  className="form-control mt-3"
+                />
+              </Col>
+            </Row>
+            <Row className="v2row3">
+              <Col md={4}>
+                <label className="mt-3">Color</label>
+              </Col>
+              <Col md={8}>
+                <input
+                  type="text"
+                  name="color"
+                  value={carInfo.color}
                   onChange={handleChange}
                   className="form-control mt-3"
                 />

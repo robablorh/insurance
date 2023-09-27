@@ -27,26 +27,26 @@ function TextLinkExample() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-      <Navbar className="bg-body-tertiary">
+      <Navbar className="bg-primary" style={{ boxShadow: "0 4px 5px rgba(0, 0, 0, 0.4)" }}>
         <Container>
           <Navbar.Brand href="#home">
-            <Button variant="primary" onClick={handleShow}>
+            <Button style={{backgroundColor: 'black'}} onClick={handleShow}>
               <FiMenu />
             </Button>
 
-            <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas show={show} onHide={handleClose} style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.3)', border: 'none', width: '250px' }}>
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Dashboard</Offcanvas.Title>
+                <Offcanvas.Title className='text-primary pt-2'>Dashboard</Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
-                <ul className='offcanvaslinks' >
+              <Offcanvas.Body style={{ marginTop: '15px' }}>
+                <ul className='offcanvaslinks' style={{ listStyleType: 'none', padding: 0 }} >
                  
-                  <li><Link className='offcanlink' to='/vehichel1'>NEW INSURANCE </Link></li>
-                  <li><Link className='offcanlink'  to='/history'>History</Link></li>
+                  <li style={{ marginBottom: '10px' }}><Link className='offcanlink ' to='/vehichel1' style={{ textDecoration: 'none', color: '#333' }}>NEW INSURANCE </Link></li>
+                  <li style={{ marginBottom: '10px' }}><Link className='offcanlink ' to='/history' style={{ textDecoration: 'none', color: '#333' }}>History</Link></li>
                  
                   
-                  <li>
-                    <button   className='logoutbtn' onClick={logout}>Logout</button>
+                  <li style={{ marginBottom: '10px' }}>
+                    <button className='logoutbtn' onClick={logout} style={{ backgroundColor: 'transparent', border: 'none', color: '#333', cursor: 'pointer', padding: 0 }}>Logout</button>
                   </li> 
                 </ul>
               </Offcanvas.Body>
@@ -55,7 +55,7 @@ function TextLinkExample() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-             <p>Signed in as:<span className='user'> {user[0].name}</span> </p> 
+              <p className='text-white'>Signed in as:<span className='user text-white' style={{ textTransform: 'uppercase' }}> {user[0].name}</span> </p> 
               
             </Navbar.Text>
           </Navbar.Collapse>

@@ -230,18 +230,18 @@ const Carconfirmation = () => {
           </Row>
           <Row className="rowC4">
             <Col xs={6} className="p-4">
-              Color
-            </Col>
-            <Col xs={6} className="p-4 pe-5 text-end">
-              {carDetails[carDetails.length - 1].color}
-            </Col>
-          </Row>
-          <Row className="rowC4">
-            <Col xs={6} className="p-4">
               model
             </Col>
             <Col xs={6} className="p-4 pe-5 text-end">
               {carDetails[carDetails.length - 1].model}
+            </Col>
+          </Row>
+          <Row className="rowC4">
+            <Col xs={6} className="p-4">
+              Color
+            </Col>
+            <Col xs={6} className="p-4 pe-5 text-end">
+              {carDetails[carDetails.length - 1].color}
             </Col>
           </Row>
           <Row className="rowC4">
@@ -364,16 +364,16 @@ const Carconfirmation = () => {
           </Row>
           
 
-          <Row className="rowC4"> 
+          <Row className=""> 
           <div className="d-grid gap-2">
       
-            <Button  className="btnpremium" onClick={generateTotalAmount}    size="lg">
+            <Button  className="btnpremium w-75 mx-auto" onClick={generateTotalAmount} size="lg">
              Click to view premium
             </Button>
             </div> 
           
           </Row>
-          {carValue.calcAmount && <Row className="rowC4" ><p>Ghs{carValue.calcAmount}</p></Row>}
+          {carValue.calcAmount && <Row className="rowC4" ><p className="text-danger">Ghs{carValue.calcAmount}</p></Row>}
 
           <br />
           <br />

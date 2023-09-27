@@ -58,18 +58,24 @@ const Signin = () => {
 
 
   return (
-    <div style={{ backgroundColor: "", height: "100vh" }}>
-      <Container className="cont">
+    <div style={{ backgroundColor: "#f2eefb", height: "100vh" }} className="d-flex justify-content-center rounded shadow p-4 mx-auto">
+      <Container className="w-50 h-75 my-auto"
+        style={{
+          backgroundColor: "white", // Replace with your desired background color
+          boxShadow: "5px 5px 10px 10px rgba(0,0,0,0.5)",
+          borderRadius: "2rem",
+          padding: "2rem", // Add padding to your div content
+        }}>
         <Row>
           <Col
-            md={8}
+            md={12}
             className="d-flex justify-content-center align-items-center"
           >
             <div className="sign">
-              <h2 className="sinh">Login</h2>
+              <h2 className="sinh" style={{ color: "rgb(250, 125, 15)"}}>Login</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
+                  <label htmlFor="email" className="form-label silab">
                     Email:
                   </label>
                   <input
@@ -83,7 +89,7 @@ const Signin = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="password" className="form-label">
+                  <label htmlFor="password" className="form-label silab">
                     Password:
                   </label>
                   <input
@@ -101,10 +107,10 @@ const Signin = () => {
                 <div className="mb-3 form-check">
                   <input
                     type="checkbox"
-                    className="form-check-input"
+                    className="form-check-input rad"
                     id="remember-me"
                   />
-                  <label htmlFor="remember-me" className="form-check-label">
+                  <label htmlFor="remember-me" className="form-check-label silab">
                     Remember Me
                   </label>
                   <Link className="forg" to="/forgot">
@@ -116,14 +122,14 @@ const Signin = () => {
                   Login
                 </button> */}
 
-                <input className="sibtn" type="submit" value="login" />
+                <input className="sibtn text-white" type="submit" value="login" />
                 <p className="sinp">
                   You do not have an account? <Link to="/signup">Sign-up</Link>
                 </p>
               </form>
             </div>
           </Col>
-          <Col
+          {/* <Col
             md={4}
             className="d-flex justify-content-center align-items-center"
           >
@@ -140,7 +146,7 @@ const Signin = () => {
                 borderRadius: "2rem",
               }}
             />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>

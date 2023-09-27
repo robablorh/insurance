@@ -34,7 +34,11 @@ const Navbar1 = () => {
  
 
   return (
-    <div>
+   
+
+  // ...
+
+  <div>
     <Navbar bg="dark" variant="dark">
       <Container>
         <Nav className="me-auto">
@@ -45,61 +49,68 @@ const Navbar1 = () => {
           <Nav.Link href="#pricing"><FaYoutube /></Nav.Link>
         </Nav>
 
-        <Nav className="justify-content-center logins" activeKey="/home">
+        
+        <Nav className="me-auto  logins flex-wrap" activeKey="/home">
           <Nav.Item>
-            <button  onClick={navigateSignin} className='nav1btn btn btn-primary'>
-              <BsPersonCircle /> Sign In
+            <button onClick={navigateSignin} className='nav1btn btn btn-primary d-flex align-items-center'>
+              <BsPersonCircle className='me-2' /> Sign In
             </button>
           </Nav.Item>
           <Nav.Item>
-            <button onClick={navigateSignup} className='nav1btn btn btn-success'>
-              <MdPersonAdd /> Sign Up
+            <button onClick={navigateSignup} className='nav1btn btn btn-success d-flex align-items-center'>
+              <MdPersonAdd className='me-2' /> Sign Up
             </button>
           </Nav.Item>
         </Nav>
 
         <Nav className="justify-content-end" activeKey="/home">
           <Nav.Item>
-            <Nav.Link ><Link to='/contact'>Contact</Link></Nav.Link>
+            <Nav.Link><Link to='/contact'>Contact</Link></Nav.Link>
           </Nav.Item>
         </Nav>
       </Container>
     </Navbar>
 
-     <div>
-     <Navbar expand="lg" className="bg-body-tertiary">
-       <Container>
-         <Navbar.Brand href="/">
-           <div className="d-flex align-items-center"> {/* Used the d-flex to create a flex container */}
-             <img
-               alt=""
-               src={logo}
-               width="100"
-               height="70"
-               className="d-inline-block align-top"
-             />
-             <span className="fw-bolder text-primary ms-1">INSURANCE</span> 
-           </div>
-         </Navbar.Brand>
-         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-         <Navbar.Collapse id="basic-navbar-nav">
-           <Nav className="mx-auto" > 
-             <Nav.Link>
-               <Link className="n2links" to='/'>Home</Link>
-             </Nav.Link>
-             <Nav.Link className="n22links">
-               <Link to='/autoinsurance'>Insurance Companies</Link>
-             </Nav.Link>
-             <Nav.Link className="n22links">
-               <Link to='/insurancecovers'>Insurance Covers</Link>
-             </Nav.Link>
-            
-           </Nav>
-         </Navbar.Collapse>
-       </Container>
-     </Navbar>
-   </div>
-   </div>
+    <div>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="/">
+            <div className="d-flex align-items-center">
+              <img
+                alt=""
+                src={logo}
+                width="100"
+                height="70"
+                className="d-inline-block align-top"
+              />
+              <span className="fw-bolder text-primary ms-1">INSURANCE</span>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mx-auto flex-wrap">
+                <Nav.Item className="text-center"> {/* Center-align the first item */}
+                  <Nav.Link>
+                    <Link className="n2links" to='/'>Home</Link>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item className="text-center"> {/* Center-align the second item */}
+                  <Nav.Link className="n22links">
+                    <Link to='/autoinsurance'>Insurance Companies</Link>
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item className="text-center"> {/* Center-align the third item */}
+                  <Nav.Link className="n22links">
+                    <Link to='/insurancecovers'>Insurance Covers</Link>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  </div>
+
   );
 };
 
