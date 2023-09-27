@@ -19,6 +19,7 @@ import Carconfirmation1 from "./components/Carconfirmation1";
 import Certificate from "./components/Certificate";
 import Contact from "./components/Contact";
 import History from "./components/History";
+import Footer from './components/Footer'
 
 const Router = () => {
   return (
@@ -44,6 +45,7 @@ const Router = () => {
         <Route path="/history" element={<History/>}/>
 
       </Routes>
+    
     </div>
   );
 };

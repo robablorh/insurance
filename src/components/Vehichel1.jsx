@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
 import { getCarDetails } from "../redux/userSlice";
 
+
 const Vehichel1 = () => {
 
   const navigate = useNavigate();
@@ -154,6 +155,7 @@ const Vehichel1 = () => {
           )}
         </Container>
       </div>
+     
     </>
   );
 };

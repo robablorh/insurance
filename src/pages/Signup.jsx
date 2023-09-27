@@ -8,6 +8,7 @@ import axios from "axios";
 import { addUser } from "../redux/userSlice";
 import { useDispatch, /*useSelector*/ } from "react-redux";
 import logo from '../images/newlogo.png';
+import Footer from '../components/Footer'
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -182,6 +183,7 @@ const Signup = () => {
         </Row>
       </Container>
       </div>
+      <Footer/>
     </div>
   );
 };

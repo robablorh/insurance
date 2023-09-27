@@ -12,6 +12,7 @@ import { addUser } from "../redux/userSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../images/newlogo.png';
+import Footer from '../components/Footer'
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -193,6 +194,7 @@ const Signin = () => {
         </Row>
       </Container>
     </div>
+    <Footer/>
     </div>
   );
 };
