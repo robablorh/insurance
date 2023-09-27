@@ -16,7 +16,7 @@ const Home = () => {
             <img
 
               src={car}
-              height="720"
+              height="750"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
 
@@ -28,7 +28,7 @@ const Home = () => {
             <img
 
               src={caro2}
-              height="720"
+              height="750"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
 
@@ -40,7 +40,7 @@ const Home = () => {
             <img
 
               src={caro4}
-              height="720"
+              height="750"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
             />
@@ -50,7 +50,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               src={caro5}
-              height="720"
+              height="750"
               width="100%"
               style={{ filter: 'brightness(60%)' }}
             />

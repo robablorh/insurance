@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Nav, Navbar} from "react-bootstrap";
 import signinpng from "../images/signin.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../redux/userSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from '../images/newlogo.png';
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -58,6 +59,48 @@ const Signin = () => {
 
 
   return (
+   <div>
+    <div>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="/">
+          <div className="d-flex align-items-center">
+            <img
+              alt=""
+              src={logo}
+              width="100"
+              height="70"
+              className="d-inline-block align-top"
+            />
+            <span className="fw-bolder text-primary ms-1">INSURANCE</span>
+          </div>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mx-auto flex-wrap">
+              <Nav.Item className="text-center"> {/* Center-align the first item */}
+                <Nav.Link>
+                  <Link className="n2links" to='/'>Home</Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="text-center"> {/* Center-align the second item */}
+                <Nav.Link className="n22links">
+                  <Link to='/autoinsurance'>Insurance Companies</Link>
+                </Nav.Link>
+              </Nav.Item>
+              <Nav.Item className="text-center"> {/* Center-align the third item */}
+                <Nav.Link className="n22links">
+                  <Link to='/insurancecovers'>Insurance Covers</Link>
+                </Nav.Link>
+              </Nav.Item>
+            </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  </div>
+
+
+
     <div style={{ backgroundColor: "#f2eefb", height: "100vh" }} className="d-flex justify-content-center rounded shadow p-4 mx-auto">
       <Container className="w-50 h-75 my-auto"
         style={{
@@ -149,6 +192,7 @@ const Signin = () => {
           </Col> */}
         </Row>
       </Container>
+    </div>
     </div>
   );
 };

@@ -348,3 +348,9 @@
 .logoutbtn:hover {
 	color: #0c6dfd !important;
 }
+.footer{
+	text-align: center;
+	background-color: black;
+	color: white;
+	height: 30px;
+}

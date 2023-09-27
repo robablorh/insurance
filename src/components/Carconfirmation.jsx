@@ -353,12 +353,8 @@ const Carconfirmation = () => {
                 <option value="PRIORITY INSURANCE">Priority Insurance</option>
                 <option value="SEREN INSURANCE">Serene Insurance</option>
                 <option value="STAR INSURANCE">Star Insurance</option>
-                <option value="PRUDENTIAL INSURANCE">
-                  Prudential Insurance
-                </option>
-                <option value="ENTERPRISE INSURANCE">
-                  Enterprise Insurance
-                </option>
+                <option value="PRUDENTIAL INSURANCE"> Prudential Insurance</option>
+                <option value="ENTERPRISE INSURANCE">Enterprise Insurance</option>
               </select>
             </Col>     
           </Row>

@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useState } from 'react';
-import Router from './Router'; // Import your custom Router component
+import Router from './Router'; 
+import Footer from './components/Footer'
 import DashBoard from './pages/DashBoard';
 import DashBoardRouter from './pages/DashBoardRouter';
 import Carconfirmation from './components/Carconfirmation';
@@ -20,6 +21,8 @@ function App() {
   return (
     <div>
      <Router/>
+    
+     <Footer/>
      
 
 
