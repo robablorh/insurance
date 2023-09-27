@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import car3 from "../images/car3.png";
@@ -62,16 +63,21 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <Container>
+    <div style={{ backgroundColor: "#f2eefb", height: "100vh" }} className="d-flex justify-content-center rounded shadow p-4 mx-auto">
+      <Container className="w-50  my-auto"
+        style={{
+          backgroundColor: "white", // Replace with your desired background color
+          boxShadow: "5px 5px 10px 10px rgba(0,0,0,0.5)",
+          borderRadius: "2rem",
+          padding: "2rem", // Add padding to your div content
+        }}>
         <Row>
           <Col className="sign">
-            <h2 className="sinh">Sign Up</h2>
-            <p>Sign-up below to get started</p>
+            <h2 className="sinh" style={{ color: "rgb(250, 125, 15)" }}>Sign Up</h2>
+            <p className="text-center" style={{ color: "rgb(250, 125, 15)"}}>Sign-up below to get started</p>
 
             <form className="siform" onSubmit={handleSubmit}>
               <label className="silab">Name:</label>
-              <br />
               <input
                 className="silinp"
                 type="text"
@@ -79,10 +85,9 @@ const Signup = () => {
                 value={signUpDetails.name}
                 onChange={handleChange}
               />
-              <br />
 
               <label className="silab">Email</label>
-              <br />
+            
               <input
                 className="silinp"
                 type="email"
@@ -91,10 +96,10 @@ const Signup = () => {
                 onChange={handleChange}
               />
               {errorMessage && <div>{errorMessage}</div>}
-              <br />
+          
 
               <label className="silab">Password</label>
-              <br />
+            
               <input
                 className="silinp"
                 type="text"
@@ -102,10 +107,10 @@ const Signup = () => {
                 value={signUpDetails.password}
                 onChange={handleChange}
               />
-              <br />
+            
 
               <label className="silab">Confirm Password</label>
-              <br />
+           
               <input
                 className="silinp"
                 type="text"
@@ -114,22 +119,22 @@ const Signup = () => {
                 onChange={handleChange}
               />
               {passwordError && <span>{passwordError}</span>}
-              <br />
+            
 
               <input className="rad" type="radio" name="remeberme " />
-              <label className="rem">Remember Me</label>
-              <br />
+              <label className="silab">Remember Me</label>
+             
 
-              <input className="sibtn" type="submit" value="Sign Up" />
+              <input className="sibtn text-white" type="submit" value="Sign Up" />
               <p className="sinp">
                 {" "}
                 Already have an account? <Link to="/login">login</Link>
               </p>
             </form>
           </Col>
-          <Col>
+          {/* <Col>
             <img src={car3} height="700" width="600" />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>

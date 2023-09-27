@@ -1,348 +1,350 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }
 
 /*Nav1 styles*/
 
 .logins {
-  margin-right: 500px;
+	margin-right: 500px;
 }
 .nav1btn {
-  margin-right: 15px;
-  border-radius: 20px;
+	margin-right: 15px;
+	border-radius: 20px;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 .pnav {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 
 /*Nav2 styles*/
-
+/* 
 .n2links {
-  margin-left: 600px;
-}
+	margin-left: 600px;
+} */
 
 /*Home*/
 .h1head {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .h2head {
-  text-align: center;
+	text-align: center;
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 .tparty {
-  margin-top: 90px;
+	margin-top: 90px;
 }
 
 .foot {
-  margin-bottom: 100px;
+	margin-bottom: 100px;
 }
 
 .sur1 {
-  margin-top: 50px;
-  margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 .suform {
-  margin-top: 50px;
-  margin-bottom: 100px;
+	margin-top: 50px;
+	margin-bottom: 100px;
 }
 
 .insu {
-  width: 400px;
-  height: 60px;
+	width: 400px;
+	height: 60px;
 }
 .subtn {
-  margin-left: 1200px;
-  width: 120px;
-  height: 50px;
-  border-radius: 15px;
+	margin-left: 1200px;
+	width: 120px;
+	height: 50px;
+	border-radius: 15px;
 }
 
 .crInput {
-  width: 400px;
-  height: 50px;
+	width: 400px;
+	height: 50px;
 }
 
 .tabdraft {
-  height: 150px;
+	height: 150px;
 }
 .tabdraft1 {
-  height: 60px;
+	height: 60px;
 }
 
 .draft {
-  border: 2px solid black;
-  padding: 80px;
+	border: 2px solid black;
+	padding: 80px;
 }
 
 /* SIgnIn&UP*/
 
 .silab {
-  color: rgb(31, 102, 196);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 20px;
+	color: rgb(31, 102, 196);
+	margin-bottom: 5px;
+	margin-top: 5px;
+	margin-left: 5px;
 }
 .silinp {
-  width: 600px;
-  height: 50px;
-  margin-left: 17px;
-  margin-bottom: 20px;
+	width: 100%;
+	height: 50px;
+	margin-left: 5px;
+	margin-bottom: 20px;
 }
 .sign {
-  /* border: 2px solid rgb(97, 144, 245); */
-  margin-top: 4rem;
+	/* border: 2px solid rgb(97, 144, 245); */
+	margin-top: 4rem;
 }
 
 .sibtn {
-  width: 600px;
-  height: 45px;
-  margin-left: 17px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  background-color: rgb(250, 125, 15);
-  border-radius: 10px;
-  border-color: rgb(250, 125, 15);
+	width: 100%;
+	height: 45px;
+	margin-left: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: rgb(250, 125, 15);
+	border-radius: 10px;
+	border-color: rgb(250, 125, 15);
 }
 .rad {
-  margin-left: 30px;
+	margin-left: 5px;
 }
 .forg {
-  margin-left: 300px;
+	margin-left: 300px;
 }
 .sinp {
-  text-align: center;
+	text-align: center;
 }
 .sinh {
-  text-align: center;
+	text-align: center;
 }
 
 .per {
-  height: 70px;
-  width: 180px;
+	height: 70px;
+	width: 180px;
 }
 /*Dashboard*/
 .row5 {
-  background-color: rgb(87, 119, 207);
-  width: 100%;
-  border-bottom: 3px solid rgb(39, 39, 121);
-  height: 70px;
-  padding-top: 15px;
-  color: white;
+	background-color: rgb(87, 119, 207);
+	width: 100%;
+	border-bottom: 3px solid rgb(39, 39, 121);
+	height: 70px;
+	padding-top: 15px;
+	color: white;
 }
 .row3 {
-  background-color: rgb(194, 210, 216);
-  height: 100px;
-  width: 100%;
-  border-bottom: 3px solid gray;
+	background-color: rgb(194, 210, 216);
+	height: 100px;
+	width: 100%;
+	border-bottom: 3px solid gray;
 }
 .row4 {
-  background-color: rgb(194, 210, 216);
+	background-color: rgb(194, 210, 216);
 
-  height: 150px;
-  width: 100%;
-  border-bottom: 3px solid gray;
-  padding-top: 20px;
+	height: 150px;
+	width: 100%;
+	border-bottom: 3px solid gray;
+	padding-top: 20px;
 }
 
 .robtn {
-  height: 30px;
-  width: 100px;
-  margin-left: 3rem;
-  margin-top: 30px;
+	height: 30px;
+	width: 100px;
+	margin-left: 3rem;
+	margin-top: 30px;
 }
 .prow {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 .lach {
-  margin-top: 30px;
+	margin-top: 30px;
 }
 .labin {
-  width: 60%;
-  margin-left: 14rem;
-  height: 40px;
+	width: 60%;
+	margin-left: 14rem;
+	height: 40px;
 }
 .find {
-  margin-top: 50px;
-  margin-left: 24rem;
-  width: 200px;
-  height: 40px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	margin-top: 50px;
+	margin-left: 24rem;
+	width: 200px;
+	height: 40px;
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .box {
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 .dashcont {
-  border: 3px solid gray;
-  height: 600px;
+	border: 3px solid gray;
+	height: 600px;
 }
 .v2row3 {
-  background-color: rgb(194, 210, 216);
-  height: 5rem;
-  width: 100%;
-  border-bottom: 3px solid gray;
+	background-color: rgb(194, 210, 216);
+	height: 5rem;
+	width: 100%;
+	border-bottom: 3px solid gray;
 }
 
 .rowC4 {
-  background-color: rgb(194, 210, 216);
+	background-color: rgb(194, 210, 216);
 
-  height: 80px;
-  width: 100%;
-  border-bottom: 3px solid gray;
+	height: 80px;
+	width: 100%;
+	border-bottom: 3px solid gray;
 }
 .btn-group {
-  margin-top: 60px;
+	margin-top: 60px;
 }
 
 .wholebox {
-  margin-left: 20px;
-  margin-top: 50px;
+	margin-left: 20px;
+	margin-top: 50px;
 }
 
 .vehinp {
-  margin-left: 40px;
-  width: 300px;
-  height: 40px;
+	margin-left: 40px;
+	width: 300px;
+	height: 40px;
 }
 
 .vehinpp {
-  margin-left: 40px;
-  width: 100px;
-  height: 40px;
+	margin-left: 40px;
+	width: 100px;
+	height: 40px;
 }
 .cbbtn {
-  width: 150px;
-  margin-top: 60px;
+	width: 150px;
+	margin-top: 60px;
 }
 
 .combtn {
-  margin-left: 900px;
+	margin-left: 900px;
 }
 
 .brk {
-  width: 450px;
+	width: 450px;
 }
 .shifttypes {
-  margin-left: 450px;
+	margin-left: 450px;
 }
 .covers {
-  text-align: center;
+	text-align: center;
 }
 .cert {
-  border: 3px solid black;
-  padding: 30px;
-  height: 80vh;
-  background-image: url("./images/sticky.png");
-  background-size: 40rem;
-  background-repeat: no-repeat;
+	border: 3px solid black;
+	padding: 30px;
+	height: 80vh;
+	background-image: url('./images/sticky.png');
+	background-size: 40rem;
+	background-repeat: no-repeat;
 
-  background-position: center center;
-  /* Other CSS styles for your column */
+	background-position: center center;
+	/* Other CSS styles for your column */
 
-  font-size: 25px;
-  font-weight: bolder;
+	font-size: 25px;
+	font-weight: bolder;
 }
 .sticker {
- text-align: center;
- font-size: 50px;
-
+	text-align: center;
+	font-size: 50px;
 }
-.sticker1{
- text-align: center;
-
+.sticker1 {
+	text-align: center;
 }
-.certbody{
-  margin-left: 180px;
+.certbody {
+	margin-left: 180px;
 }
-
-
 
 .generate {
-  width: 80%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+	width: 80%;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 }
-.confp{
-  font-size: 19px;
-  font-weight: bold;
+.confp {
+	font-size: 19px;
+	font-weight: bold;
 }
-.mesg{
-  color: red;
-  margin-top: 10px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.conth2{
-  text-align: center;
-  margin-bottom: 6rem;
+.mesg {
+	color: red;
+	margin-top: 10px;
+	text-align: center;
+	font-weight: 600;
 }
 
-.btnpremium{
-  margin-top: 8px;
-  margin-bottom: 8px;
-  background-color: rgb(93, 93, 235);
-  
- 
+.conth2 {
+	text-align: center;
+	margin-bottom: 6rem;
+}
 
+.btnpremium {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background-color: rgb(93, 93, 235);
 
-  .clacamount{
-   color: brown;
-  }
+	.clacamount {
+		color: brown;
+	}
 }
 .rowC4 p {
-  font-size: 30px;
-  text-align: center;
-  padding-top: 10px;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 10px;
 }
-.confirmp{
-   color: black;
-   font-size: 20px;
+.confirmp {
+	color: black;
+	font-size: 20px;
 }
-.paybtn{
-  background-color: rgb(47, 47, 229);
-  width: 150px;
-  height: 50px;
-  border-radius: 8px;
-  color: white;
-  margin-bottom: 20px;
+.paybtn {
+	background-color: rgb(47, 47, 229);
+	width: 150px;
+	height: 50px;
+	border-radius: 8px;
+	color: white;
+	margin-bottom: 20px;
 }
 
-.downloadbtn{
-  background-color: rgb(76, 76, 255);
-  width: 150px;
-  height: 50px;
-  border-radius: 8px;
-  color: white;
-  margin-bottom: 20px;
-  margin-left: 75rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.downloadbtn {
+	background-color: rgb(76, 76, 255);
+	width: 150px;
+	height: 50px;
+	border-radius: 8px;
+	color: white;
+	margin-bottom: 20px;
+	margin-left: 75rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-.user{
- 
-  font-size: 30px;
+.user {
+	font-size: 0.8rem;
 }
-.logoutbtn{
-  border: 0px;
-  background-color: aliceblue;
+.logoutbtn {
+	border: 0px;
+	background-color: aliceblue;
 }
 .offcanvaslinks li {
-  text-decoration: none;
+	text-decoration: none;
 }
 
-.offcanvaslinks .offcanlink{
-  text-decoration: none;
+.offcanvaslinks .offcanlink {
+	text-decoration: none;
 }
 
-.offcanvaslinks.offcanlink:focus{
-  outline: none;
+.offcanvaslinks.offcanlink:focus {
+	outline: none;
+}
+
+.offcanlink:hover {
+	color: #0c6dfd !important;
+}
+
+.logoutbtn:hover {
+	color: #0c6dfd !important;
 }
